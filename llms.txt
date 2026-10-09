@@ -1,0 +1,12 @@
+# Can Fabrika
+
+> Indie game studio in Berlin, Germany, making mobile games (iOS and Android) in two lines: pixel-art tycoon/management games and party games played with friends on phones. Founded by Can, who also runs the Turkish YouTube channel "Kendi Kendime Hikayeler" (31K+ subscribers).
+
+## Games
+- [Hero Heaven Tycoon](https://www.canfabrika.com/#hero-heaven-tycoon): Pixel-art idle tycoon RPG. A busy hero town, heroes hunting monsters together, loot, raids and boss walls. For fans of Evil Hunter Tycoon and Kairosoft games. In development.
+- [REZİL](https://www.canfabrika.com/#rezil): 18+ party card game for phones in the spirit of Cards Against Humanity. Room codes, bots, 10 natively written languages (incl. Turkish, German, English), country, expat and office decks. In development.
+- [HeroHaven](https://www.canfabrika.com/#herohaven): Cozy cat-themed pixel-art town and dungeon manager. iPhone first. In development.
+
+## Contact
+- Email: admin@canfabrika.com
+- LinkedIn: https://www.linkedin.com/in/canberkd
