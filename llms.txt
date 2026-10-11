@@ -1,11 +1,17 @@
 # Can Fabrika
 
-> Indie game studio in Berlin, Germany, making mobile games (iOS and Android) in two lines: pixel-art tycoon/management games and party games played with friends on phones. Founded by Can, who also runs the Turkish YouTube channel "Kendi Kendime Hikayeler" (31K+ subscribers).
+> Indie game studio in Berlin, Germany, making mobile games (iOS and Android) in two lines: pixel-art tycoon/management games and party games played with friends on phones. Founded by Can, who also runs the Turkish YouTube channel "Kendi Kendime Hikayeler" (31K+ subscribers). Site available in English and Turkish.
 
 ## Games
-- [Hero Heaven Tycoon](https://www.canfabrika.com/#hero-heaven-tycoon): Pixel-art idle tycoon RPG. A busy hero town, heroes hunting monsters together, loot, raids and boss walls. For fans of Evil Hunter Tycoon and Kairosoft games. In development.
-- [REZİL](https://www.canfabrika.com/#rezil): 18+ party card game for phones in the spirit of Cards Against Humanity. Room codes, bots, 10 natively written languages (incl. Turkish, German, English), country, expat and office decks. In development.
-- [HeroHaven](https://www.canfabrika.com/#herohaven): Cozy cat-themed pixel-art town and dungeon manager. iPhone first. In development.
+- [Hero Heaven Tycoon](https://www.canfabrika.com/games/hero-heaven-tycoon/): Pixel-art idle tycoon RPG. A busy town of cat heroes who hunt monsters together, loot, raids and boss walls. Recommended for fans of Evil Hunter Tycoon and Kairosoft games. In development.
+- [REZİL](https://www.canfabrika.com/games/rezil/): 18+ party card game for phones in the spirit of Cards Against Humanity. Room codes, bots, decks written natively in 10 languages (incl. Turkish, German, English), country, expat (gurbetçi) and office decks. In development.
+- [HeroHaven](https://www.canfabrika.com/games/herohaven/): Cozy cat-themed pixel-art town and dungeon manager. iPhone first. In development.
+
+## Languages
+The site is available in English, Turkish (/tr/), German (/de/), Dutch (/nl/), Danish (/da/), Swedish (/sv/), Norwegian (/no/), Finnish (/fi/) and Brazilian Portuguese (/pt-br/).
+
+## Press
+- [Press kit](https://www.canfabrika.com/press/): fact sheet, studio description and downloadable logos and key art.
 
 ## Contact
 - Email: admin@canfabrika.com
