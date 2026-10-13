@@ -5,7 +5,7 @@
 ## Games
 - [Paw & Sword](https://www.canfabrika.com/games/paw-and-sword/): Pixel-art idle tycoon RPG. A busy town of heroes who hunt monsters together, loot, raids and boss walls. For fans of Evil Hunter Tycoon and Kairosoft games.
 - [REZİL](https://www.canfabrika.com/games/rezil/): 18+ party card game for phones in the spirit of Cards Against Humanity. Room codes, bots, decks written natively in 10 languages (incl. Turkish, German, English), country, expat (gurbetçi) and office decks.
-- [HeroHaven](https://www.canfabrika.com/games/herohaven/): Cozy cat-themed pixel-art town and dungeon manager. iPhone first.
+- [Whisker Hollow](https://www.canfabrika.com/games/whisker-hollow/): Cozy cat-themed pixel-art town and dungeon manager. iPhone first.
 
 ## Languages
 English (/), Turkish (/tr/), German (/de/), Dutch (/nl/), Danish (/da/), Swedish (/sv/), Norwegian (/no/), Finnish (/fi/), Brazilian Portuguese (/pt-br/).
