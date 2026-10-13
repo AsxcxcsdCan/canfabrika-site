@@ -169,6 +169,7 @@ details p{margin:0;padding:0 18px 16px;color:var(--ink-2)}
 
 /* contact */
 .contact{background:var(--gold);border-top:4px solid var(--ink)}
+.contact .lead{color:#3F2A52}
 .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
 @media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
 .sign{position:relative;max-width:620px}
@@ -185,7 +186,8 @@ details p{margin:0;padding:0 18px 16px;color:var(--ink-2)}
 
 footer{background:var(--plum);color:#D9CBEA;padding:32px 0;font-size:14px;border-top:4px solid #000}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
-.foot nav{display:flex;flex-wrap:wrap;gap:16px}
+.foot nav{display:flex;flex-wrap:wrap;gap:4px 14px}
+.foot nav a{display:inline-flex;align-items:center;min-height:32px}
 .foot a{color:#D9CBEA}
 .foot img{width:34px}
 
