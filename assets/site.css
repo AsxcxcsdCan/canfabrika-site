@@ -264,3 +264,6 @@ input,select,textarea{font-size:16px}
 .lang-hint a{font-weight:700}
 .lang-hint:not([hidden]){display:flex;align-items:center;justify-content:center;gap:4px;flex-wrap:nowrap}
 .lang-hint a{flex:0 1 auto}
+
+/* Current release details on game pages. */
+.release-facts{margin-top:20px;font-size:15px;color:inherit}
