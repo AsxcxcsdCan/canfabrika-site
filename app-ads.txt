@@ -1,1 +1,26 @@
+# app-ads.txt for canfabrika.com (developer website of every Can Fabrika app in the stores)
+# Lines starting with # are comments; ad crawlers ignore them.
+
+OWNERDOMAIN=canfabrika.com
+
+# Google AdMob (Turkish account, also the AdMob bidder inside LevelPlay mediation)
 google.com, pub-7863089077580116, DIRECT, f08c47fec0942fa0
+
+# ---------------------------------------------------------------------------------------------------------------
+# Unity LevelPlay (ironSource) + Unity Ads: TO BE CONFIRMED BY THE OWNER, then uncomment.
+# These IDs belong to your own accounts and cannot be guessed. Do not uncomment a line with a [placeholder] in it.
+#
+# 1) ironSource / LevelPlay direct line. ID: LevelPlay platform > avatar (bottom left) > Account > API tab >
+#    "Publisher ID".
+# ironsrc.com, [IRONSOURCE_PUBLISHER_ID], DIRECT
+#
+# 2) Unity Ads direct line (Unity Ads is a LevelPlay bidder). ID: Unity Cloud dashboard > Monetization > Settings >
+#    Organization > App-ads.txt > "Show full list" (copy the unity.com line exactly as shown).
+# unity.com, [UNITY_ADS_ID_FROM_DASHBOARD], DIRECT, [CERT_ID_FROM_DASHBOARD]
+#
+# 3) Reseller lines: paste the whole "Show full list" block from the same Monetization > Settings > Organization >
+#    App-ads.txt page here (it already includes the ironSource exchange resellers). Re-check it monthly; the list changes.
+#
+# 4) Any other network you switch on in LevelPlay (AppLovin, Meta, Mintegral, Pangle, ...): paste the app-ads.txt lines
+#    that network's own dashboard shows for your account.
+# ---------------------------------------------------------------------------------------------------------------
