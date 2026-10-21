@@ -16,6 +16,21 @@ English (/), Turkish (/tr/), German (/de/), Dutch (/nl/), Danish (/da/), Swedish
 - [Privacy policy](https://www.canfabrika.com/privacy/): website and games (Google AdSense, Google AdMob, Unity Gaming Services).
 - [Legal notice](https://www.canfabrika.com/impressum/)
 
+## Devlog
+- [Devlog index](https://www.canfabrika.com/blog/): articles by Can on how the games are designed, balanced, drawn and written. Turkish versions at https://www.canfabrika.com/tr/blog/.
+- [Why I'm building Paw & Sword](https://www.canfabrika.com/blog/why-im-building-paw-and-sword/): What Evil Hunter Tycoon got right, what I want to make bigger, and why watching the battles is the real game.
+- [One cat per class: designing 45 hero classes that stay recognisable](https://www.canfabrika.com/blog/one-cat-per-class-45-hero-classes/): 45 classes, 7 rank looks each, and one rule that keeps every hero recognisable from Normal to Mythic.
+- [Teaching pixel cats to walk in 8 directions](https://www.canfabrika.com/blog/pixel-cats-walking-in-8-directions/): Why side-view heroes felt wrong, how five drawn views and some mirroring give eight directions, and the traps in flipping sprites.
+- [Keeping sprite animations consistent: the 8-frame sheet rule](https://www.canfabrika.com/blog/consistent-sprite-animations-8-frame-rule/): Sheets of exactly eight frames, feet on one line, no size pops and an eye-colour check: the boring rules that keep hundreds of animations clean.
+- [Balancing an idle tycoon with bot players](https://www.canfabrika.com/blog/balancing-an-idle-tycoon-with-bot-players/): Four bot profiles, a simulated month of play in a few minutes, and the problems they found before any human tester did.
+- [The mid-game gold problem and how Hero Training fixed it](https://www.canfabrika.com/blog/mid-game-gold-problem-hero-training/): Gold was piling up with nothing to buy. Here is how a training feature with an escalating daily price gave it a job without breaking the boss walls.
+- [Boss walls, the Boss Horn and losing fairly](https://www.canfabrika.com/blog/boss-walls-boss-horn-losing-fairly/): Some bosses are meant to stop you for a while. The trick is making a loss feel like information, not punishment.
+- [Rare heroes on purpose: summons, pity timers and why heroes never leave](https://www.canfabrika.com/blog/rare-heroes-summons-pity-timers/): Rarity makes moments. A pity timer keeps the worst case known, and a no-leaving rule keeps the heroes you love.
+- [Writing REZİL in 10 languages, from scratch](https://www.canfabrika.com/blog/writing-rezil-in-10-languages/): A translated joke keeps its meaning and loses its punch. Why every REZİL deck is written from scratch in its own language.
+- [Inside a REZİL deck: what makes a card funny](https://www.canfabrika.com/blog/inside-a-rezil-deck-funny-cards/): Two prompt shapes that work, four kinds of answer that win, and how the expat and office decks are put together.
+- [Small rules, big laughs: REZİL's scoring and the cut reverse round](https://www.canfabrika.com/blog/rezil-rules-scoring-reverse-round/): Why a worst-answer-wins round was cut, how points and Crowd Pick work, and why party rules should fit in one sentence.
+- [One indie studio, three games: how Can Fabrika works](https://www.canfabrika.com/blog/one-indie-studio-three-games/): Two production lines, one set of tools, privacy-first defaults and one website for everything. Plus a short introduction to Whisker Hollow.
+
 ## Contact
 - Email: admin@canfabrika.com
 - LinkedIn: https://www.linkedin.com/in/canberkd

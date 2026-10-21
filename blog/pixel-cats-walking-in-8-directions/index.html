@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Teaching pixel cats to walk in 8 directions | Can Fabrika</title>
+<meta name="description" content="Why side-view-only heroes felt wrong in Paw &amp; Sword, how 5 drawn views plus mirroring give 8 directions, and what to watch for with frame counts and flipping.">
+<link rel="canonical" href="https://www.canfabrika.com/blog/pixel-cats-walking-in-8-directions/"><link rel="alternate" hreflang="en" href="https://www.canfabrika.com/blog/pixel-cats-walking-in-8-directions/"><link rel="alternate" hreflang="tr" href="https://www.canfabrika.com/tr/blog/piksel-kedileri-8-yonde-yurutmek/"><link rel="alternate" hreflang="x-default" href="https://www.canfabrika.com/blog/pixel-cats-walking-in-8-directions/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#2A1838">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Can Fabrika"><meta name="application-name" content="Can Fabrika">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Can Fabrika">
+<meta property="og:title" content="Teaching pixel cats to walk in 8 directions | Can Fabrika"><meta property="og:description" content="Why side-view-only heroes felt wrong in Paw &amp; Sword, how 5 drawn views plus mirroring give 8 directions, and what to watch for with frame counts and flipping.">
+<meta property="og:url" content="https://www.canfabrika.com/blog/pixel-cats-walking-in-8-directions/"><meta property="og:image" content="https://www.canfabrika.com/img/og/paw-and-sword.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="tr_TR"><meta property="article:published_time" content="2026-10-21"><meta property="article:author" content="Can">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="48x48" href="/img/icons/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/pixelify.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.canfabrika.com/#studio", "name": "Can Fabrika", "legalName": "Yusuf Demir (Can Fabrika)", "url": "https://www.canfabrika.com/", "logo": "https://www.canfabrika.com/img/logo.png", "image": "https://www.canfabrika.com/og-image.png", "email": "admin@canfabrika.com", "description": "Indie game studio in Istanbul making pixel-art tycoon games and party games for iPhone and Android.", "address": {"@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR"}, "founder": {"@type": "Person", "@id": "https://www.canfabrika.com/#can", "name": "Can", "jobTitle": "Indie game developer and YouTuber", "sameAs": ["https://www.linkedin.com/in/canberkd"]}, "knowsAbout": ["Mobile games", "Pixel art", "Idle tycoon games", "Party games", "Unity"], "sameAs": ["https://www.linkedin.com/in/canberkd"]}, {"@type": "Article", "@id": "https://www.canfabrika.com/blog/pixel-cats-walking-in-8-directions/#article", "headline": "Teaching pixel cats to walk in 8 directions", "description": "Why side-view-only heroes felt wrong in Paw & Sword, how 5 drawn views plus mirroring give 8 directions, and what to watch for with frame counts and flipping.", "inLanguage": "en", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "wordCount": 921, "image": "https://www.canfabrika.com/img/r/hht-key-1280.webp", "mainEntityOfPage": "https://www.canfabrika.com/blog/pixel-cats-walking-in-8-directions/", "url": "https://www.canfabrika.com/blog/pixel-cats-walking-in-8-directions/", "author": {"@type": "Person", "@id": "https://www.canfabrika.com/#can", "name": "Can", "url": "https://www.canfabrika.com/"}, "publisher": {"@id": "https://www.canfabrika.com/#studio"}, "isPartOf": {"@type": "Blog", "@id": "https://www.canfabrika.com/blog/#blog", "name": "Can Fabrika Devlog"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Can Fabrika", "item": "https://www.canfabrika.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.canfabrika.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Teaching pixel cats to walk in 8 directions", "item": "https://www.canfabrika.com/blog/pixel-cats-walking-in-8-directions/"}]}]}</script><meta name="google-site-verification" content="omlJJhKDroRbwBHp-f-Joc5zq-EFIKVsDdQLzzSmENg"><meta name="google-adsense-account" content="ca-pub-7863089077580116">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="lang-hint" id="lang-hint" hidden data-alts='{&quot;tr&quot;: [&quot;/tr/blog/piksel-kedileri-8-yonde-yurutmek/&quot;, &quot;Bu sayfa Türkçe de mevcut.&quot;, &quot;Kapat&quot;, &quot;Türkçe&quot;]}'></div>
+<header class="site-head">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="/"><img class="px" src="/img/mark.webp" width="44" height="39" alt="">Can Fabrika</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-links">Menu</button>
+    <div class="links" id="site-links"><a href="/#games">Games</a><a href="/blog/" aria-current="page">Blog</a><a href="/#youtube">YouTube</a><a href="/#about">About</a><a href="/#contact">Contact</a>
+      <details class="lang-pick">
+        <summary aria-label="Language">🌐 EN</summary>
+        <ul><li><a href="/blog/pixel-cats-walking-in-8-directions/" hreflang="en" lang="en" aria-current="true">English</a></li><li><a href="/tr/blog/piksel-kedileri-8-yonde-yurutmek/" hreflang="tr" lang="tr">Türkçe</a></li></ul>
+      </details>
+    </div>
+  </nav>
+</header><main id="main">
+  <section class="g-hero post-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Can Fabrika</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Teaching pixel cats to walk in 8 directions</li></ol></nav>
+      <span class="eyebrow">Devlog · Paw &amp; Sword · Animation</span>
+      <h1>Teaching pixel cats to walk in 8 directions</h1>
+      <p class="lead">Why side-view heroes felt wrong, how five drawn views and some mirroring give eight directions, and the traps in flipping sprites.</p>
+      <p class="post-meta">By <span class="byline">Can · Can Fabrika</span> · <time datetime="2026-10-21">21 October 2026</time> · 5 min read</p>
+    </div>
+  </section>
+  <section class="post-sec">
+    <div class="wrap">
+      <article class="post">
+<p>For a long time, the heroes in Paw &amp; Sword could only face left or right. When a hero walked up a path towards the hunting ground, they did it sideways, like a crab with a sword. This post is about why I changed that, how eight directions are built from five drawings, and the small traps that come with mirroring sprites.</p>
+<h2>Why side-view only felt wrong</h2>
+<p>Side-view sprites are the classic shortcut for small games, and they work well when the camera looks at a flat stage. Paw &amp; Sword's town and hunting grounds are seen from above at an angle. Paths run up, down and diagonally. Heroes cross the map in every direction all day.</p>
+<p>With side-view only, three things went wrong:</p>
+<ul>
+<li><strong>Vertical walking looked like sliding.</strong> A hero walking north showed their side walk cycle while moving up the screen. The feet moved left-right while the body moved up. Your eye notices that even if you cannot say what is wrong.</li>
+<li><strong>Groups lost their shape.</strong> When five heroes walk to a boss together, the fun is seeing a party converge. When everyone faces left or right, the party looks like a row of cut-outs.</li>
+<li><strong>Fights lost their aim.</strong> A healer standing below a knight and "facing" him with a sideways sprite does not read as aiming at him. With directional poses, you can see who is hitting whom.</li>
+</ul>
+<p>Since the whole game is built on the idea that <a href="/blog/why-im-building-paw-and-sword/">watching is the game</a>, this was not polish. It was a core readability problem.</p>
+<figure><picture><source type="image/avif" srcset="/img/r/hht-key-640.avif 640w, /img/r/hht-key-960.avif 960w, /img/r/hht-key-1280.avif 1280w" sizes="(max-width:760px) 92vw, 680px"><source type="image/webp" srcset="/img/r/hht-key-640.webp 640w, /img/r/hht-key-960.webp 960w, /img/r/hht-key-1280.webp 1280w" sizes="(max-width:760px) 92vw, 680px"><img src="/img/r/hht-key-1280.webp" width="1536" height="1024" alt="Paw &amp; Sword key art: cat heroes walking towards the viewer down a cobblestone path in a pixel-art town" loading="lazy" decoding="async"></picture><figcaption>Heroes walk towards you, away from you and diagonally. Sideways-only was not enough.</figcaption></figure>
+<h2>Eight directions from five drawings</h2>
+<p>Eight directions sound expensive: north, north-east, east, south-east, south, south-west, west and north-west. But a character seen from a fixed camera is mostly symmetrical from left to right. So the game uses five drawn views and gets the other three by flipping:</p>
+<ul>
+<li><strong>Drawn:</strong> front (walking towards you), back (walking away), side (east), and the two right-hand diagonals (south-east and north-east).</li>
+<li><strong>Mirrored by the game:</strong> west, south-west and north-west.</li>
+</ul>
+<p>That cuts the drawing work for directions by three eighths, and the saving multiplies. Paw &amp; Sword has 45 classes, each with seven rank looks, and each look has several clips: idle, walk, attack, skill, getting hurt. Every view you do not have to draw is saved hundreds of times over.</p>
+<p>The game picks the view from the direction a hero is moving or attacking. If you build something similar, one tip: do not switch views on every tiny change of angle. A hero walking at nearly exactly 45 degrees can flicker between two views every frame. Keeping the current view until the new direction is clearly closer looks much calmer.</p>
+<h2>The traps in mirroring</h2>
+<p>Flipping a sprite is one line of code. Making it look right takes more thought.</p>
+<ul>
+<li><strong>Handedness flips.</strong> A knight with a sword in the right paw holds it in the left paw when mirrored. At hunting-ground size this is almost never noticed, so I accept it. A design that depends on one side, like a shield emblem with lettering or an eyepatch, is a problem, and I avoid that kind of detail.</li>
+<li><strong>Flip around the feet, not the canvas.</strong> If a sprite is not perfectly centred in its frame, flipping it around the middle of the canvas makes the hero jump sideways when they turn. The flip has to happen around the point where the character stands.</li>
+<li><strong>Lighting direction.</strong> If the art has a strong light from one side, the mirrored view is lit from the other side. Soft, mostly top-down lighting hides this.</li>
+<li><strong>Weapons and effects.</strong> A swing or spell effect that extends far to one side needs room on both sides of the frame after mirroring, or it gets clipped.</li>
+</ul>
+<h2>How many frames is enough?</h2>
+<p>Most strips in the game run 8 to 10 frames. Fewer frames save work but look choppy, especially at 2x battle speed, where a 4-frame walk turns into a shuffle. More frames look smoother but multiply the cost across every class, look and view.</p>
+<p>For walking, 8 frames give a full stride with a clear contact pose for each foot, which is what makes a walk feel grounded. Attacks need a little more: an anticipation pose, the strike, an impact frame and a recovery. A ninth or tenth frame often goes into the anticipation, because a readable wind-up is what lets you see a hit coming.</p>
+<p>The higher rank looks reuse the poses of the Normal look as a reference. The cat and outfit change, the motion does not. That keeps 45 classes moving with the same rhythm, and it keeps each class consistent with the <a href="/blog/one-cat-per-class-45-hero-classes/">one-cat-per-class rule</a>.</p>
+<h2>What changed after the switch</h2>
+<p>The difference is bigger than I expected. Heroes leaving town now walk down the path towards you, and heroes coming home walk away up the screen with their backs turned. A party gathering for a boss looks like a party. And in a fight, the direction a hero faces tells you who they are targeting.</p>
+<p>The cost is real: more clips to produce and more to check. The next post covers how those clips are kept consistent: <a href="/blog/consistent-sprite-animations-8-frame-rule/">the 8-frame sheet rule, feet lines and size pops</a>.</p>
+<aside class="takeaway pxbox"><p><strong>Takeaway:</strong> if your camera looks down at an angle, side-view sprites will feel wrong in ways players sense but cannot name. Five drawn views plus mirroring give you eight directions at a fraction of the cost, as long as you flip around the feet and keep one-sided details out of the design.</p></aside>
+      </article>
+      <nav class="post-foot" aria-label="Read next">
+        <p class="post-game"><strong>The game:</strong> <a href="/games/paw-and-sword/">Paw &amp; Sword game page ▸</a></p>
+        <h2>Read next</h2>
+        <ul class="post-list"><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 October 2026</time> · 5 min read</p><h3><a href="/blog/consistent-sprite-animations-8-frame-rule/">Keeping sprite animations consistent: the 8-frame sheet rule</a></h3><p>Sheets of exactly eight frames, feet on one line, no size pops and an eye-colour check: the boring rules that keep hundreds of animations clean.</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 October 2026</time> · 5 min read</p><h3><a href="/blog/one-cat-per-class-45-hero-classes/">One cat per class: designing 45 hero classes that stay recognisable</a></h3><p>45 classes, 7 rank looks each, and one rule that keeps every hero recognisable from Normal to Mythic.</p></article></li></ul>
+        <a class="btn alt" href="/blog/">◂ Back to all posts</a>
+      </nav>
+    </div>
+  </section>
+  <section class="contact below" id="contact" aria-labelledby="contact-h">
+    <div class="wrap contact-grid">
+      <div class="sign reveal">
+        <img src="/img/mascot.webp" width="720" height="528" loading="lazy" decoding="async" alt="Can Fabrika mascot: a purple cat engineer with goggles and a wrench, leaning on a wooden sign">
+        <div class="sign-text" aria-hidden="true">Say hi!</div>
+      </div>
+      <div class="reveal">
+        <h2 id="contact-h">The door is open</h2>
+        <p class="lead">Players, press, publishers and collabs: all welcome.</p>
+        <div class="contact-links">
+          <a class="btn alt" href="mailto:admin@canfabrika.com">✉ admin@canfabrika.com</a>
+          <a class="btn alt" href="https://www.linkedin.com/in/canberkd" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn red" href="https://www.youtube.com/results?search_query=Kendi+Kendime+Hikayeler" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main><footer>
+  <div class="wrap foot">
+    <span style="display:flex;align-items:center;gap:10px"><img class="px" src="/img/mark.webp" width="34" height="30" alt="">© <span id="yr">2026</span> Can Fabrika · İstanbul</span>
+    <nav aria-label="Footer"><a href="/games/paw-and-sword/">Paw &amp; Sword</a> <a href="/games/rezil/">REZİL</a> <a href="/games/whisker-hollow/">Whisker Hollow</a> <a href="/blog/">Blog</a> <a href="mailto:admin@canfabrika.com">admin@canfabrika.com</a> <a href="/press/">Press kit</a> <a href="https://www.youtube.com/results?search_query=Kendi+Kendime+Hikayeler" rel="noopener">YouTube</a> <a href="/support/">Support</a> <a href="/impressum/">Imprint</a> <a href="/privacy/">Privacy</a></nav>
+    <span>Made with love and pixels.</span>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body></html>

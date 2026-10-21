@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="tr" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Devlog · Fabrikadan notlar | Can Fabrika</title>
+<meta name="description" content="Can Fabrika devlogu: Paw &amp; Sword, REZİL ve Whisker Hollow nasıl tasarlanıyor, dengeleniyor, çiziliyor ve yazılıyor; oyunların geliştiricisinden notlar.">
+<link rel="canonical" href="https://www.canfabrika.com/tr/blog/"><link rel="alternate" hreflang="en" href="https://www.canfabrika.com/blog/"><link rel="alternate" hreflang="tr" href="https://www.canfabrika.com/tr/blog/"><link rel="alternate" hreflang="x-default" href="https://www.canfabrika.com/blog/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#2A1838">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Can Fabrika"><meta name="application-name" content="Can Fabrika">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Can Fabrika">
+<meta property="og:title" content="Devlog · Fabrikadan notlar | Can Fabrika"><meta property="og:description" content="Can Fabrika devlogu: Paw &amp; Sword, REZİL ve Whisker Hollow nasıl tasarlanıyor, dengeleniyor, çiziliyor ve yazılıyor; oyunların geliştiricisinden notlar.">
+<meta property="og:url" content="https://www.canfabrika.com/tr/blog/"><meta property="og:image" content="https://www.canfabrika.com/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="tr_TR"><meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="48x48" href="/img/icons/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/pixelify.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.canfabrika.com/#studio", "name": "Can Fabrika", "legalName": "Yusuf Demir (Can Fabrika)", "url": "https://www.canfabrika.com/", "logo": "https://www.canfabrika.com/img/logo.png", "image": "https://www.canfabrika.com/og-image.png", "email": "admin@canfabrika.com", "description": "Indie game studio in Istanbul making pixel-art tycoon games and party games for iPhone and Android.", "address": {"@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR"}, "founder": {"@type": "Person", "@id": "https://www.canfabrika.com/#can", "name": "Can", "jobTitle": "Indie game developer and YouTuber", "sameAs": ["https://www.linkedin.com/in/canberkd"]}, "knowsAbout": ["Mobile games", "Pixel art", "Idle tycoon games", "Party games", "Unity"], "sameAs": ["https://www.linkedin.com/in/canberkd"]}, {"@type": "Blog", "@id": "https://www.canfabrika.com/tr/blog/#blog", "name": "Can Fabrika Devlog", "url": "https://www.canfabrika.com/tr/blog/", "inLanguage": "tr", "description": "Can Fabrika devlogu: Paw & Sword, REZİL ve Whisker Hollow nasıl tasarlanıyor, dengeleniyor, çiziliyor ve yazılıyor; oyunların geliştiricisinden notlar.", "publisher": {"@id": "https://www.canfabrika.com/#studio"}, "author": {"@id": "https://www.canfabrika.com/#can"}, "blogPost": [{"@type": "Article", "headline": "Paw & Sword'u neden yapıyorum", "url": "https://www.canfabrika.com/tr/blog/paw-and-sword-neden-yapiyorum/", "datePublished": "2026-10-21", "author": {"@id": "https://www.canfabrika.com/#can"}}, {"@type": "Article", "headline": "Her sınıfa tek kedi: tanınır kalan 45 kahraman sınıfı tasarlamak", "url": "https://www.canfabrika.com/tr/blog/her-sinifa-bir-kedi-45-kahraman-sinifi/", "datePublished": "2026-10-21", "author": {"@id": "https://www.canfabrika.com/#can"}}, {"@type": "Article", "headline": "Piksel kedilere 8 yönde yürümeyi öğretmek", "url": "https://www.canfabrika.com/tr/blog/piksel-kedileri-8-yonde-yurutmek/", "datePublished": "2026-10-21", "author": {"@id": "https://www.canfabrika.com/#can"}}, {"@type": "Article", "headline": "Sprite animasyonlarını tutarlı tutmak: 8 karelik sayfa kuralı", "url": "https://www.canfabrika.com/tr/blog/tutarli-sprite-animasyonlari-8-kare-kurali/", "datePublished": "2026-10-21", "author": {"@id": "https://www.canfabrika.com/#can"}}, {"@type": "Article", "headline": "Bot oyuncularla bir idle tycoon dengelemek", "url": "https://www.canfabrika.com/tr/blog/bot-oyuncularla-idle-tycoon-dengelemek/", "datePublished": "2026-10-21", "author": {"@id": "https://www.canfabrika.com/#can"}}, {"@type": "Article", "headline": "Oyun ortasındaki altın sorunu ve Kahraman Eğitimi", "url": "https://www.canfabrika.com/tr/blog/oyun-ortasi-altin-sorunu-kahraman-egitimi/", "datePublished": "2026-10-21", "author": {"@id": "https://www.canfabrika.com/#can"}}, {"@type": "Article", "headline": "Boss duvarları, Boss Borusu ve adil kaybetmek", "url": "https://www.canfabrika.com/tr/blog/boss-duvarlari-boss-borusu-adil-kaybetmek/", "datePublished": "2026-10-21", "author": {"@id": "https://www.canfabrika.com/#can"}}, {"@type": "Article", "headline": "Bilerek nadir kahramanlar: çağırma, garanti sayacı ve kahramanlar neden hiç gitmiyor", "url": "https://www.canfabrika.com/tr/blog/nadir-kahramanlar-cagirma-ve-garanti-sayaci/", "datePublished": "2026-10-21", "author": {"@id": "https://www.canfabrika.com/#can"}}, {"@type": "Article", "headline": "REZİL'i 10 dilde sıfırdan yazmak", "url": "https://www.canfabrika.com/tr/blog/rezil-10-dilde-sifirdan-yazmak/", "datePublished": "2026-10-21", "author": {"@id": "https://www.canfabrika.com/#can"}}, {"@type": "Article", "headline": "Bir REZİL destesinin içinden: kartı komik yapan ne?", "url": "https://www.canfabrika.com/tr/blog/rezil-destesinin-icinden-komik-kart-nasil-yazilir/", "datePublished": "2026-10-21", "author": {"@id": "https://www.canfabrika.com/#can"}}, {"@type": "Article", "headline": "Küçük kurallar, büyük kahkahalar: REZİL'de puanlama ve çıkarılan ters tur", "url": "https://www.canfabrika.com/tr/blog/rezil-kurallari-puanlama-ters-tur/", "datePublished": "2026-10-21", "author": {"@id": "https://www.canfabrika.com/#can"}}, {"@type": "Article", "headline": "Tek kişilik stüdyo, üç oyun: Can Fabrika nasıl çalışıyor?", "url": "https://www.canfabrika.com/tr/blog/tek-kisilik-studyo-uc-oyun/", "datePublished": "2026-10-21", "author": {"@id": "https://www.canfabrika.com/#can"}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Can Fabrika", "item": "https://www.canfabrika.com/tr/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.canfabrika.com/tr/blog/"}]}]}</script><meta name="google-site-verification" content="omlJJhKDroRbwBHp-f-Joc5zq-EFIKVsDdQLzzSmENg"><meta name="google-adsense-account" content="ca-pub-7863089077580116">
+</head><body>
+<a class="skip" href="#main">İçeriğe geç</a>
+<div class="lang-hint" id="lang-hint" hidden data-alts='{&quot;en&quot;: [&quot;/blog/&quot;, &quot;This page is also available in English.&quot;, &quot;Close&quot;, &quot;English&quot;]}'></div>
+<header class="site-head">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="/tr/"><img class="px" src="/img/mark.webp" width="44" height="39" alt="">Can Fabrika</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-links">Menü</button>
+    <div class="links" id="site-links"><a href="/tr/#games">Oyunlar</a><a href="/tr/blog/" aria-current="page">Blog</a><a href="/tr/#youtube">YouTube</a><a href="/tr/#about">Hakkında</a><a href="/tr/#contact">İletişim</a>
+      <details class="lang-pick">
+        <summary aria-label="Language">🌐 TR</summary>
+        <ul><li><a href="/blog/" hreflang="en" lang="en">English</a></li><li><a href="/tr/blog/" hreflang="tr" lang="tr" aria-current="true">Türkçe</a></li></ul>
+      </details>
+    </div>
+  </nav>
+</header><main id="main">
+  <section class="g-hero post-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/tr/">Can Fabrika</a></li><li aria-current="page">Blog</li></ol></nav>
+      <span class="eyebrow">Devlog · 12 yazı</span>
+      <h1>Devlog: fabrikadan notlar</h1>
+      <p class="lead">Oyunlar nasıl tasarlanıyor, dengeleniyor, çiziliyor ve yazılıyor. Tek kişilik bir stüdyodan dürüst notlar; ilk seferde işe yaramayan kısımlar da dahil.</p>
+    </div>
+  </section>
+  <section class="post-sec">
+    <div class="wrap">
+      <ul class="post-list"><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 5 dk okuma</p><h2><a href="/tr/blog/paw-and-sword-neden-yapiyorum/">Paw &amp; Sword'u neden yapıyorum</a></h2><p>Evil Hunter Tycoon neyi doğru yaptı, ben neyi büyütmek istiyorum ve asıl oyun neden savaşları izlemek.</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 5 dk okuma</p><h2><a href="/tr/blog/her-sinifa-bir-kedi-45-kahraman-sinifi/">Her sınıfa tek kedi: tanınır kalan 45 kahraman sınıfı tasarlamak</a></h2><p>45 sınıf, her biri için 7 rütbe görünüşü ve her kahramanı Normal'den Mitik'e kadar tanınır tutan tek bir kural.</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 5 dk okuma</p><h2><a href="/tr/blog/piksel-kedileri-8-yonde-yurutmek/">Piksel kedilere 8 yönde yürümeyi öğretmek</a></h2><p>Yandan görünen kahramanlar neden yanlış durdu, beş çizim ve biraz aynalama sekiz yönü nasıl veriyor, sprite çevirmenin tuzakları neler.</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 5 dk okuma</p><h2><a href="/tr/blog/tutarli-sprite-animasyonlari-8-kare-kurali/">Sprite animasyonlarını tutarlı tutmak: 8 karelik sayfa kuralı</a></h2><p>Tam sekiz karelik sayfalar, aynı çizgide ayaklar, boy sıçraması yok ve göz rengi kontrolü: yüzlerce animasyonu temiz tutan sıkıcı kurallar.</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 5 dk okuma</p><h2><a href="/tr/blog/bot-oyuncularla-idle-tycoon-dengelemek/">Bot oyuncularla bir idle tycoon dengelemek</a></h2><p>Dört bot profili, birkaç dakikada simüle edilen bir aylık oyun ve hiçbir insan testçi görmeden bulunan sorunlar.</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 4 dk okuma</p><h2><a href="/tr/blog/oyun-ortasi-altin-sorunu-kahraman-egitimi/">Oyun ortasındaki altın sorunu ve Kahraman Eğitimi</a></h2><p>Alınacak bir şey olmadığı için altın yığılıyordu. Günlük fiyatı artan bir eğitim özelliği, boss duvarlarını bozmadan altına nasıl bir iş verdi?</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 4 dk okuma</p><h2><a href="/tr/blog/boss-duvarlari-boss-borusu-adil-kaybetmek/">Boss duvarları, Boss Borusu ve adil kaybetmek</a></h2><p>Bazı boss'lar seni bir süre durdurmak için var. İşin sırrı, yenilgiyi ceza gibi değil bilgi gibi hissettirmek.</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 4 dk okuma</p><h2><a href="/tr/blog/nadir-kahramanlar-cagirma-ve-garanti-sayaci/">Bilerek nadir kahramanlar: çağırma, garanti sayacı ve kahramanlar neden hiç gitmiyor</a></h2><p>Nadirlik anlar yaratır. Garanti sayacı en kötü senaryoyu belli tutar, gitmeme kuralı da sevdiğin kahramanları yanında tutar.</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 4 dk okuma</p><h2><a href="/tr/blog/rezil-10-dilde-sifirdan-yazmak/">REZİL'i 10 dilde sıfırdan yazmak</a></h2><p>Çevrilen bir espri anlamını korur ama vuruculuğunu kaybeder. REZİL'in her destesi neden kendi dilinde sıfırdan yazılıyor?</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 4 dk okuma</p><h2><a href="/tr/blog/rezil-destesinin-icinden-komik-kart-nasil-yazilir/">Bir REZİL destesinin içinden: kartı komik yapan ne?</a></h2><p>İşe yarayan iki soru kalıbı, tur kazandıran dört cevap türü ve gurbetçi ile beyaz yaka destelerinin nasıl kurulduğu.</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 4 dk okuma</p><h2><a href="/tr/blog/rezil-kurallari-puanlama-ters-tur/">Küçük kurallar, büyük kahkahalar: REZİL'de puanlama ve çıkarılan ters tur</a></h2><p>En kötü cevabın kazandığı tur neden çıkarıldı, puanlar ve Crowd Pick nasıl işliyor, parti kuralları neden tek cümleye sığmalı?</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 4 dk okuma</p><h2><a href="/tr/blog/tek-kisilik-studyo-uc-oyun/">Tek kişilik stüdyo, üç oyun: Can Fabrika nasıl çalışıyor?</a></h2><p>İki üretim hattı, tek araç seti, gizlilik öncelikli varsayılanlar ve her şey için tek bir site. Bir de Whisker Hollow'a kısa bir giriş.</p></article></li></ul>
+    </div>
+  </section>
+  <section class="contact below" id="contact" aria-labelledby="contact-h">
+    <div class="wrap contact-grid">
+      <div class="sign reveal">
+        <img src="/img/mascot.webp" width="720" height="528" loading="lazy" decoding="async" alt="Can Fabrika maskotu: gözlüklü ve İngiliz anahtarlı mor kedi mühendis, tahta bir tabelaya yaslanıyor">
+        <div class="sign-text" aria-hidden="true">Selam ver!</div>
+      </div>
+      <div class="reveal">
+        <h2 id="contact-h">Kapı açık</h2>
+        <p class="lead">Oyuncular, basın, yayıncılar ve iş birlikleri: hepsine açığız.</p>
+        <div class="contact-links">
+          <a class="btn alt" href="mailto:admin@canfabrika.com">✉ admin@canfabrika.com</a>
+          <a class="btn alt" href="https://www.linkedin.com/in/canberkd" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn red" href="https://www.youtube.com/results?search_query=Kendi+Kendime+Hikayeler" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main><footer>
+  <div class="wrap foot">
+    <span style="display:flex;align-items:center;gap:10px"><img class="px" src="/img/mark.webp" width="34" height="30" alt="">© <span id="yr">2026</span> Can Fabrika · İstanbul</span>
+    <nav aria-label="Footer"><a href="/tr/oyunlar/paw-and-sword/">Paw &amp; Sword</a> <a href="/tr/oyunlar/rezil/">REZİL</a> <a href="/tr/oyunlar/whisker-hollow/">Whisker Hollow</a> <a href="/tr/blog/">Blog</a> <a href="mailto:admin@canfabrika.com">admin@canfabrika.com</a> <a href="/press/">Basın kiti</a> <a href="https://www.youtube.com/results?search_query=Kendi+Kendime+Hikayeler" rel="noopener">YouTube</a> <a href="/support/">Destek</a> <a href="/impressum/">Künye</a> <a href="/privacy/#tr">Gizlilik</a></nav>
+    <span>Sevgiyle ve piksellerle yapıldı.</span>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body></html>

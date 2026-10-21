@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="tr" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sprite animasyonlarını tutarlı tutmak: 8 karelik sayfa kuralı | Can Fabrika</title>
+<meta name="description" content="Paw &amp; Sword'dan pratik bir sprite süreci: poz referansları, tam 8 karelik sayfalar, script ile kesme ve ölçekleme, tek ayak çizgisi, boy sıçraması ve göz rengi kontrolleri.">
+<link rel="canonical" href="https://www.canfabrika.com/tr/blog/tutarli-sprite-animasyonlari-8-kare-kurali/"><link rel="alternate" hreflang="en" href="https://www.canfabrika.com/blog/consistent-sprite-animations-8-frame-rule/"><link rel="alternate" hreflang="tr" href="https://www.canfabrika.com/tr/blog/tutarli-sprite-animasyonlari-8-kare-kurali/"><link rel="alternate" hreflang="x-default" href="https://www.canfabrika.com/blog/consistent-sprite-animations-8-frame-rule/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#2A1838">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Can Fabrika"><meta name="application-name" content="Can Fabrika">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Can Fabrika">
+<meta property="og:title" content="Sprite animasyonlarını tutarlı tutmak: 8 karelik sayfa kuralı | Can Fabrika"><meta property="og:description" content="Paw &amp; Sword'dan pratik bir sprite süreci: poz referansları, tam 8 karelik sayfalar, script ile kesme ve ölçekleme, tek ayak çizgisi, boy sıçraması ve göz rengi kontrolleri.">
+<meta property="og:url" content="https://www.canfabrika.com/tr/blog/tutarli-sprite-animasyonlari-8-kare-kurali/"><meta property="og:image" content="https://www.canfabrika.com/img/og/paw-and-sword.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="tr_TR"><meta property="og:locale:alternate" content="en_US"><meta property="article:published_time" content="2026-10-21"><meta property="article:author" content="Can">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="48x48" href="/img/icons/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/pixelify.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.canfabrika.com/#studio", "name": "Can Fabrika", "legalName": "Yusuf Demir (Can Fabrika)", "url": "https://www.canfabrika.com/", "logo": "https://www.canfabrika.com/img/logo.png", "image": "https://www.canfabrika.com/og-image.png", "email": "admin@canfabrika.com", "description": "Indie game studio in Istanbul making pixel-art tycoon games and party games for iPhone and Android.", "address": {"@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR"}, "founder": {"@type": "Person", "@id": "https://www.canfabrika.com/#can", "name": "Can", "jobTitle": "Indie game developer and YouTuber", "sameAs": ["https://www.linkedin.com/in/canberkd"]}, "knowsAbout": ["Mobile games", "Pixel art", "Idle tycoon games", "Party games", "Unity"], "sameAs": ["https://www.linkedin.com/in/canberkd"]}, {"@type": "Article", "@id": "https://www.canfabrika.com/tr/blog/tutarli-sprite-animasyonlari-8-kare-kurali/#article", "headline": "Sprite animasyonlarını tutarlı tutmak: 8 karelik sayfa kuralı", "description": "Paw & Sword'dan pratik bir sprite süreci: poz referansları, tam 8 karelik sayfalar, script ile kesme ve ölçekleme, tek ayak çizgisi, boy sıçraması ve göz rengi kontrolleri.", "inLanguage": "tr", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "wordCount": 780, "image": "https://www.canfabrika.com/img/r/hht-portrait-800.webp", "mainEntityOfPage": "https://www.canfabrika.com/tr/blog/tutarli-sprite-animasyonlari-8-kare-kurali/", "url": "https://www.canfabrika.com/tr/blog/tutarli-sprite-animasyonlari-8-kare-kurali/", "author": {"@type": "Person", "@id": "https://www.canfabrika.com/#can", "name": "Can", "url": "https://www.canfabrika.com/"}, "publisher": {"@id": "https://www.canfabrika.com/#studio"}, "isPartOf": {"@type": "Blog", "@id": "https://www.canfabrika.com/tr/blog/#blog", "name": "Can Fabrika Devlog"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Can Fabrika", "item": "https://www.canfabrika.com/tr/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.canfabrika.com/tr/blog/"}, {"@type": "ListItem", "position": 3, "name": "Sprite animasyonlarını tutarlı tutmak: 8 karelik sayfa kuralı", "item": "https://www.canfabrika.com/tr/blog/tutarli-sprite-animasyonlari-8-kare-kurali/"}]}]}</script><meta name="google-site-verification" content="omlJJhKDroRbwBHp-f-Joc5zq-EFIKVsDdQLzzSmENg"><meta name="google-adsense-account" content="ca-pub-7863089077580116">
+</head><body>
+<a class="skip" href="#main">İçeriğe geç</a>
+<div class="lang-hint" id="lang-hint" hidden data-alts='{&quot;en&quot;: [&quot;/blog/consistent-sprite-animations-8-frame-rule/&quot;, &quot;This page is also available in English.&quot;, &quot;Close&quot;, &quot;English&quot;]}'></div>
+<header class="site-head">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="/tr/"><img class="px" src="/img/mark.webp" width="44" height="39" alt="">Can Fabrika</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-links">Menü</button>
+    <div class="links" id="site-links"><a href="/tr/#games">Oyunlar</a><a href="/tr/blog/" aria-current="page">Blog</a><a href="/tr/#youtube">YouTube</a><a href="/tr/#about">Hakkında</a><a href="/tr/#contact">İletişim</a>
+      <details class="lang-pick">
+        <summary aria-label="Language">🌐 TR</summary>
+        <ul><li><a href="/blog/consistent-sprite-animations-8-frame-rule/" hreflang="en" lang="en">English</a></li><li><a href="/tr/blog/tutarli-sprite-animasyonlari-8-kare-kurali/" hreflang="tr" lang="tr" aria-current="true">Türkçe</a></li></ul>
+      </details>
+    </div>
+  </nav>
+</header><main id="main">
+  <section class="g-hero post-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/tr/">Can Fabrika</a></li><li><a href="/tr/blog/">Blog</a></li><li aria-current="page">Sprite animasyonlarını tutarlı tutmak: 8 karelik sayfa kuralı</li></ol></nav>
+      <span class="eyebrow">Devlog · Paw &amp; Sword · Çizim süreci</span>
+      <h1>Sprite animasyonlarını tutarlı tutmak: 8 karelik sayfa kuralı</h1>
+      <p class="lead">Tam sekiz karelik sayfalar, aynı çizgide ayaklar, boy sıçraması yok ve göz rengi kontrolü: yüzlerce animasyonu temiz tutan sıkıcı kurallar.</p>
+      <p class="post-meta">Yazan <span class="byline">Can · Can Fabrika</span> · <time datetime="2026-10-21">21 Ekim 2026</time> · 5 dk okuma</p>
+    </div>
+  </section>
+  <section class="post-sec">
+    <div class="wrap">
+      <article class="post">
+<p>Paw &amp; Sword'da 45 kahraman sınıfı, her sınıf için yedi rütbe görünüşü, her görünüş için birkaç klip (bekleme, yürüme, saldırı, yetenek, hasar alma) ve her klip için beşe kadar çizilmiş yön var. Bu, çok büyük sayıda animasyon şeridi demek. Tehlike tek bir kötü şerit değil. Tehlike, her biri farklı bir şekilde birazcık yanlış olan bin şerit.</p>
+<p>Bir kahramanın yürüyüşünü izlerken gözün minicik hataları yakalıyor: kedinin bir kare boyunca büyümesi, ayakların yerin içine batması, gözlerin renk değiştirmesi, bir karede kaybolup geri gelen pelerin. Bunların hiçbiri tek bir durağan görselde görünmüyor. Hepsi harekette ortaya çıkıyor. Bu yazıda şeritleri tutarlı tutmak için kullandığım kuralları sıralıyorum. Bilerek sıkıcılar.</p>
+<h2>Bir poz referansından başla</h2>
+<p>Her sınıfın bir temel görünüşü var: Normal rütbe ve onun eksiksiz bir şerit seti. O kareler, bütün üst görünüşler için poz referansı. Yeni bir şerit yapılmadan önce temel görünüşün ilgili kareleri doğru sırayla ve doğru boyutta bir poz panosuna diziliyor.</p>
+<p>Üst görünüş bu pozları birebir izliyor: aynı kare sayısı, aynı sıra, aynı zamanlama. Sadece kıyafet ve teçhizat değişiyor. Bunun iki faydası var. Hareket rütbeler arasında aynı kalıyor, yani rütbe atlayan kahraman hâlâ kendisi gibi hareket ediyor. Animasyonu oynatan oyun kodu da hangi görünüşün aktif olduğunu umursamıyor, çünkü her görünüşün kare düzeni aynı.</p>
+<p>Kedinin kendisini ise sınıfın kimlik cümlesi belirliyor; bunu <a href="/tr/blog/her-sinifa-bir-kedi-45-kahraman-sinifi/">her sınıfa tek kedi</a> yazısında anlatmıştım.</p>
+<h2>8 karelik sayfa kuralı</h2>
+<p>Yeni kareler sayfalar halinde üretiliyor ve her sayfa aynı düzene uyuyor:</p>
+<ul>
+<li>Tam sekiz figür: tek bir görünüşün tek bir şeridinden sekiz kare.</li>
+<li>Metin gibi okunan 4'e 2'lik bir ızgara: üst sıra 1'den 4'e, alt sıra 5'ten 8'e kadar kareler.</li>
+<li>Her figür kendi hücresinin tamamen içinde ve etrafında boşluk var.</li>
+<li>Sekiz figür de aynı ölçekte ve her sıranın ayakları tek bir çizgi üzerinde.</li>
+<li>Yazı, sayı, ızgara çizgisi ya da yer gölgesi yok. Arka plan şeffaf ya da çizimde hiç geçmeyen düz bir renk.</li>
+</ul>
+<p>Sekiz kare olmayan şeritler de sekiz karelik sayfa kullanıyor. On karelik bir şerit iki sayfa kullanıyor: 1'den 8'e ve 3'ten 10'a kadar kareler. Dört karelik bir şerit, sayfayı doldurmak için karelerini tekrarlıyor. Bu çakışma işe yarıyor: tekrar eden kareler yedek çekim gibi; kötü bir kare, şeridi baştan yapmadan yedeğiyle değiştirilebiliyor.</p>
+<p>Neden bu kadar katı bir düzen? Çünkü öngörülebilir bir sayfayı bir script kesebilir. Kimse kareleri elle kırpmıyor ve script her seferinde aynı kararı veriyor.</p>
+<h2>Script ile kesme ve ölçekleme</h2>
+<p>Kesme script'i her hücrede tek bir figür arıyor. İki figür birbirine değiyorsa ya da bir hücre boşsa işi reddediyor ve nedenini söylüyor. Yüksek sesle hata vermek bir özellik: "Aşağı yukarı doğru" kesilmiş bir sayfa, reddedilmiş bir sayfadan daha kötü.</p>
+<p>Boy sorunlarının çoğu ölçeklemeden çıkıyor. Akla ilk gelen yol, her kareyi kendi sınır kutusuna sığdırmak. Bu hemen bozuluyor: Kılıcı havada olan bir saldırı karesinin kutusu bekleme karesinden daha uzun, onu sığdırmak kediyi küçültüyor. Şerit oynayınca kahraman nabız gibi atıyormuş gibi görünüyor. Ben buna <strong>boy sıçraması</strong> diyorum.</p>
+<p>Çözüm, bütün şeridi tek bir oranla ölçeklemek; böylece kedinin gövdesi her karede aynı boyda kalıyor. Kareler de ortak bir dayanak noktasına, yani ayaklara göre hizalanıyor. Figürün en alttaki dolu satırı her karede aynı satıra oturuyor. Silahların ve efektlerin yukarı ya da yanlara taşmasına izin var. Zıplamalar bilinçli bir istisna ve gözle kontrol ediliyor.</p>
+<p>Son olarak kenarlar sertleştiriliyor. Yumuşak, yarı saydam kenarlı piksel çizim, oyun onu ölçeklediğinde bulanık görünüyor. Bu yüzden her piksel ya tamamen görünür ya da tamamen şeffaf.</p>
+<h2>Kontrol: karşılaştırma sayfaları ve kısa bir liste</h2>
+<p>Biten her şeridin bir karşılaştırma sayfası oluyor: bütün karelerin referansın yanında tek sırada durduğu bir görsel. Şerit ayrıca normal ve 2 kat hızda döngüde oynatılıyor. Kontrol listesi kısa:</p>
+<ol>
+<li><strong>Boy:</strong> Kedi her karede aynı boyda mı?</li>
+<li><strong>Ayaklar:</strong> Ayaklar zıplamadan ya da kaymadan çizginin üzerinde kalıyor mu?</li>
+<li><strong>Gözler:</strong> Göz rengi her karede doğru mu? En sık kayan ayrıntı bu.</li>
+<li><strong>Kıyafet:</strong> Bütün parçalar her karede var mı: pelerin, omuzluk, kemer, şapka?</li>
+<li><strong>Silah:</strong> Bütün şerit boyunca aynı patide mi kalıyor?</li>
+<li><strong>Kenarlar:</strong> Çizginin etrafında arka plandan kalan piksel var mı?</li>
+</ol>
+<p>Bir kare kontrolden geçemezse sadece o kare değiştiriliyor; mümkünse sayfadaki yedek çekimle. Tek bir kötü kare için koca şeridi baştan yapmak, süreçleri yavaşlatan şeyin ta kendisi.</p>
+<h2>Sıkıcı kurallar neden buna değer?</h2>
+<p>Küçük sprite'ları canlı hissettiren şey tutarlılık. Her karesi uyumlu bir yürüme döngüsü, hareket eden tek bir karakter gibi okunuyor. Tek bir karesi yanlış olan döngü ise bir hata gibi okunuyor; hangi karenin yanlış olduğunu kimse söyleyemese bile.</p>
+<p>Kurallar süreci tekrarlanabilir de kılıyor. Sorunları bir oyuncu yerine bir script ya da bir kontrol listesi yakalıyor. Biçim bir kez sabitlenince aynı adımlar yönlü görünüşlerde de işe yarıyor; bu da kahramanlar <a href="/tr/blog/piksel-kedileri-8-yonde-yurutmek/">sekiz yönde yürümeyi</a> öğrenirken çok önemliydi.</p>
+<figure class="tall"><picture><source type="image/avif" srcset="/img/r/hht-portrait-480.avif 480w, /img/r/hht-portrait-800.avif 800w" sizes="(max-width:760px) 92vw, 680px"><source type="image/webp" srcset="/img/r/hht-portrait-480.webp 480w, /img/r/hht-portrait-800.webp 800w" sizes="(max-width:760px) 92vw, 680px"><img src="/img/r/hht-portrait-800.webp" width="800" height="1200" alt="Paw &amp; Sword kasaba sahnesi: kalabalık bir piksel pazar meydanında çok sayıda kedi kahraman ve esnaf" loading="lazy" decoding="async"></picture><figcaption>Ekranda onlarca hareketli kedi varken küçük tutarsızlıklar hızla birikiyor.</figcaption></figure>
+<aside class="takeaway pxbox"><p><strong>Özetle:</strong> Sayfa düzenini sabitle, şeritleri tek bir oranla ölçekle, her kareyi ayaklara göre hizala ve göz rengini hareket halindeyken kontrol et. Oyuncuların fark ettiği animasyon hatalarının çoğu çizim hatası değil, tutarlılık hatası.</p></aside>
+      </article>
+      <nav class="post-foot" aria-label="Sıradaki yazılar">
+        <p class="post-game"><strong>Oyun:</strong> <a href="/tr/oyunlar/paw-and-sword/">Paw &amp; Sword oyun sayfası ▸</a></p>
+        <h2>Sıradaki yazılar</h2>
+        <ul class="post-list"><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 5 dk okuma</p><h3><a href="/tr/blog/piksel-kedileri-8-yonde-yurutmek/">Piksel kedilere 8 yönde yürümeyi öğretmek</a></h3><p>Yandan görünen kahramanlar neden yanlış durdu, beş çizim ve biraz aynalama sekiz yönü nasıl veriyor, sprite çevirmenin tuzakları neler.</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 5 dk okuma</p><h3><a href="/tr/blog/her-sinifa-bir-kedi-45-kahraman-sinifi/">Her sınıfa tek kedi: tanınır kalan 45 kahraman sınıfı tasarlamak</a></h3><p>45 sınıf, her biri için 7 rütbe görünüşü ve her kahramanı Normal'den Mitik'e kadar tanınır tutan tek bir kural.</p></article></li></ul>
+        <a class="btn alt" href="/tr/blog/">◂ Tüm yazılara dön</a>
+      </nav>
+    </div>
+  </section>
+  <section class="contact below" id="contact" aria-labelledby="contact-h">
+    <div class="wrap contact-grid">
+      <div class="sign reveal">
+        <img src="/img/mascot.webp" width="720" height="528" loading="lazy" decoding="async" alt="Can Fabrika maskotu: gözlüklü ve İngiliz anahtarlı mor kedi mühendis, tahta bir tabelaya yaslanıyor">
+        <div class="sign-text" aria-hidden="true">Selam ver!</div>
+      </div>
+      <div class="reveal">
+        <h2 id="contact-h">Kapı açık</h2>
+        <p class="lead">Oyuncular, basın, yayıncılar ve iş birlikleri: hepsine açığız.</p>
+        <div class="contact-links">
+          <a class="btn alt" href="mailto:admin@canfabrika.com">✉ admin@canfabrika.com</a>
+          <a class="btn alt" href="https://www.linkedin.com/in/canberkd" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn red" href="https://www.youtube.com/results?search_query=Kendi+Kendime+Hikayeler" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main><footer>
+  <div class="wrap foot">
+    <span style="display:flex;align-items:center;gap:10px"><img class="px" src="/img/mark.webp" width="34" height="30" alt="">© <span id="yr">2026</span> Can Fabrika · İstanbul</span>
+    <nav aria-label="Footer"><a href="/tr/oyunlar/paw-and-sword/">Paw &amp; Sword</a> <a href="/tr/oyunlar/rezil/">REZİL</a> <a href="/tr/oyunlar/whisker-hollow/">Whisker Hollow</a> <a href="/tr/blog/">Blog</a> <a href="mailto:admin@canfabrika.com">admin@canfabrika.com</a> <a href="/press/">Basın kiti</a> <a href="https://www.youtube.com/results?search_query=Kendi+Kendime+Hikayeler" rel="noopener">YouTube</a> <a href="/support/">Destek</a> <a href="/impressum/">Künye</a> <a href="/privacy/#tr">Gizlilik</a></nav>
+    <span>Sevgiyle ve piksellerle yapıldı.</span>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body></html>

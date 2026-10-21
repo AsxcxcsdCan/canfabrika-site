@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The mid-game gold problem and how Hero Training fixed it | Can Fabrika</title>
+<meta name="description" content="Bot players showed gold piling up in Paw &amp; Sword's mid game. How Hero Training works as a gold sink: escalating daily cost, a level cap per region, and why walls stay intact.">
+<link rel="canonical" href="https://www.canfabrika.com/blog/mid-game-gold-problem-hero-training/"><link rel="alternate" hreflang="en" href="https://www.canfabrika.com/blog/mid-game-gold-problem-hero-training/"><link rel="alternate" hreflang="tr" href="https://www.canfabrika.com/tr/blog/oyun-ortasi-altin-sorunu-kahraman-egitimi/"><link rel="alternate" hreflang="x-default" href="https://www.canfabrika.com/blog/mid-game-gold-problem-hero-training/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#2A1838">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Can Fabrika"><meta name="application-name" content="Can Fabrika">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Can Fabrika">
+<meta property="og:title" content="The mid-game gold problem and how Hero Training fixed it | Can Fabrika"><meta property="og:description" content="Bot players showed gold piling up in Paw &amp; Sword's mid game. How Hero Training works as a gold sink: escalating daily cost, a level cap per region, and why walls stay intact.">
+<meta property="og:url" content="https://www.canfabrika.com/blog/mid-game-gold-problem-hero-training/"><meta property="og:image" content="https://www.canfabrika.com/img/og/paw-and-sword.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="tr_TR"><meta property="article:published_time" content="2026-10-21"><meta property="article:author" content="Can">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="48x48" href="/img/icons/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/pixelify.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.canfabrika.com/#studio", "name": "Can Fabrika", "legalName": "Yusuf Demir (Can Fabrika)", "url": "https://www.canfabrika.com/", "logo": "https://www.canfabrika.com/img/logo.png", "image": "https://www.canfabrika.com/og-image.png", "email": "admin@canfabrika.com", "description": "Indie game studio in Istanbul making pixel-art tycoon games and party games for iPhone and Android.", "address": {"@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR"}, "founder": {"@type": "Person", "@id": "https://www.canfabrika.com/#can", "name": "Can", "jobTitle": "Indie game developer and YouTuber", "sameAs": ["https://www.linkedin.com/in/canberkd"]}, "knowsAbout": ["Mobile games", "Pixel art", "Idle tycoon games", "Party games", "Unity"], "sameAs": ["https://www.linkedin.com/in/canberkd"]}, {"@type": "Article", "@id": "https://www.canfabrika.com/blog/mid-game-gold-problem-hero-training/#article", "headline": "The mid-game gold problem and how Hero Training fixed it", "description": "Bot players showed gold piling up in Paw & Sword's mid game. How Hero Training works as a gold sink: escalating daily cost, a level cap per region, and why walls stay intact.", "inLanguage": "en", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "wordCount": 916, "image": "https://www.canfabrika.com/img/r/hht-portrait-800.webp", "mainEntityOfPage": "https://www.canfabrika.com/blog/mid-game-gold-problem-hero-training/", "url": "https://www.canfabrika.com/blog/mid-game-gold-problem-hero-training/", "author": {"@type": "Person", "@id": "https://www.canfabrika.com/#can", "name": "Can", "url": "https://www.canfabrika.com/"}, "publisher": {"@id": "https://www.canfabrika.com/#studio"}, "isPartOf": {"@type": "Blog", "@id": "https://www.canfabrika.com/blog/#blog", "name": "Can Fabrika Devlog"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Can Fabrika", "item": "https://www.canfabrika.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.canfabrika.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "The mid-game gold problem and how Hero Training fixed it", "item": "https://www.canfabrika.com/blog/mid-game-gold-problem-hero-training/"}]}]}</script><meta name="google-site-verification" content="omlJJhKDroRbwBHp-f-Joc5zq-EFIKVsDdQLzzSmENg"><meta name="google-adsense-account" content="ca-pub-7863089077580116">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="lang-hint" id="lang-hint" hidden data-alts='{&quot;tr&quot;: [&quot;/tr/blog/oyun-ortasi-altin-sorunu-kahraman-egitimi/&quot;, &quot;Bu sayfa Türkçe de mevcut.&quot;, &quot;Kapat&quot;, &quot;Türkçe&quot;]}'></div>
+<header class="site-head">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="/"><img class="px" src="/img/mark.webp" width="44" height="39" alt="">Can Fabrika</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-links">Menu</button>
+    <div class="links" id="site-links"><a href="/#games">Games</a><a href="/blog/" aria-current="page">Blog</a><a href="/#youtube">YouTube</a><a href="/#about">About</a><a href="/#contact">Contact</a>
+      <details class="lang-pick">
+        <summary aria-label="Language">🌐 EN</summary>
+        <ul><li><a href="/blog/mid-game-gold-problem-hero-training/" hreflang="en" lang="en" aria-current="true">English</a></li><li><a href="/tr/blog/oyun-ortasi-altin-sorunu-kahraman-egitimi/" hreflang="tr" lang="tr">Türkçe</a></li></ul>
+      </details>
+    </div>
+  </nav>
+</header><main id="main">
+  <section class="g-hero post-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Can Fabrika</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">The mid-game gold problem and how Hero Training fixed it</li></ol></nav>
+      <span class="eyebrow">Devlog · Paw &amp; Sword · Economy</span>
+      <h1>The mid-game gold problem and how Hero Training fixed it</h1>
+      <p class="lead">Gold was piling up with nothing to buy. Here is how a training feature with an escalating daily price gave it a job without breaking the boss walls.</p>
+      <p class="post-meta">By <span class="byline">Can · Can Fabrika</span> · <time datetime="2026-10-21">21 October 2026</time> · 5 min read</p>
+    </div>
+  </section>
+  <section class="post-sec">
+    <div class="wrap">
+      <article class="post">
+<p>Every economy needs a place for money to go. In Paw &amp; Sword, gold comes in from hunting and boss fights and goes out on buildings, crafting and enhancing gear. For most of the game, that balance holds. In the middle of the game, it did not, and I only found out because a bot told me.</p>
+<p>This post is about that problem, the feature that fixed it, and the rules that keep the fix from breaking something else.</p>
+<h2>How the problem showed up</h2>
+<p>I test balance with <a href="/blog/balancing-an-idle-tycoon-with-bot-players/">automated bot players</a> that simulate a month of play for four kinds of player. One report line stood out: the idle free player's purse. It grew day after day through the middle stretch of the game, between the early rush and the later regions.</p>
+<p>The reason was simple once I looked. In that stretch, the idle player had already built what they could, their heroes had decent gear, and the next big purchases were locked behind progress they had not made yet. Gold kept arriving from offline earnings and had nowhere to go.</p>
+<p>A big number in the corner might sound harmless. It is not. If gold has no use, collecting it stops feeling good, and the daily check-in loses its reward. Worse, a hoard is a hidden balance risk: the moment something new unlocks, a player with a huge pile can buy through it instantly, which flattens the pacing you designed.</p>
+<h2>Why not just raise prices?</h2>
+<p>The obvious fixes all have problems:</p>
+<ul>
+<li><strong>Raise prices across the board.</strong> That punishes the active player, whose gold was already well used, to fix a problem only the idle player had.</li>
+<li><strong>Add more things to buy that do nothing.</strong> Decorations are nice, but a sink with no effect on the game does not restore the feeling that gold matters.</li>
+<li><strong>Let gold buy premium currency.</strong> That changes the whole economy and makes every other price harder to reason about.</li>
+</ul>
+<p>What the mid game needed was a sink that scales with how much gold you have, gives something useful, and cannot be used to skip the parts of the game that are meant to take effort.</p>
+<figure class="tall"><picture><source type="image/avif" srcset="/img/r/hht-portrait-480.avif 480w, /img/r/hht-portrait-800.avif 800w" sizes="(max-width:760px) 92vw, 680px"><source type="image/webp" srcset="/img/r/hht-portrait-480.webp 480w, /img/r/hht-portrait-800.webp 800w" sizes="(max-width:760px) 92vw, 680px"><img src="/img/r/hht-portrait-800.webp" width="800" height="1200" alt="Paw &amp; Sword town: cat shopkeepers and heroes trading at market stalls next to a blacksmith in a pixel-art square" loading="lazy" decoding="async"></picture><figcaption>Gold flows from the field into the shops. In the mid game it stopped flowing back out.</figcaption></figure>
+<h2>How Hero Training works</h2>
+<p>Hero Training unlocks at a Fame level a little way into the game. From then on, you can pay town gold to train a hero, and the hero gains a fixed share of the experience their current level needs. It uses the normal level-up path, so a trained hero gains Fame, stories and stats exactly as if they had earned the level in the field.</p>
+<p>Three rules shape it:</p>
+<ul>
+<li><strong>The price rises with the hero's level.</strong> Training a high-level hero costs much more than training a new recruit, so the sink grows as your town does.</li>
+<li><strong>The price rises with every training of the day.</strong> The first session of the day for a hero is reasonable, the next one costs more, and so on, up to a small daily limit per hero. The counter resets each real day.</li>
+<li><strong>Training stops at the region cap.</strong> A hero can only be trained up to the top level of the newest region your town has opened.</li>
+</ul>
+<h2>Why those three rules</h2>
+<p>The <strong>escalating daily cost</strong> means a player with a big purse can still spend a lot, but with diminishing returns. You cannot pour a week of savings into one hero in one evening and double their level. It also gives the idle player a small, satisfying reason to check in each day: train a few heroes, see their bars move, leave.</p>
+<p>The <strong>region cap</strong> is the important one. Training is for catching heroes up, not lifting them past where your town is. A new recruit who arrived late, or a hero who sat on the bench while others hunted, can be brought up to the group. But nobody can be trained beyond the current region's levels. That keeps the <a href="/blog/boss-walls-boss-horn-losing-fairly/">boss walls</a> meaningful: they still check your gear and your team, not just your bank balance.</p>
+<p>Heroes who are in a raid fight or in the rebirth ritual cannot train. That avoids odd edge cases, like a hero levelling up in the middle of a fight.</p>
+<h2>The companion change: an earlier Rebirth Sanctum</h2>
+<p>The same bot runs showed a second, related issue: heroes who had reached the top of what the current regions could teach them had nothing to work towards. The Rebirth Sanctum is where a hero can be reborn: they start lower again but keep part of what they earned and grow stronger over several rebirths. It used to open late. Moving it earlier gives strong heroes a next step, and gives gold and time another meaningful destination.</p>
+<h2>Did it work?</h2>
+<p>In the following bot runs, all four player profiles used training, and the idle player used it most, which is exactly who it was for. The purse now has somewhere to go in the mid game. Whether the price curve is right is something I will keep tuning; that is what the bots are for. But the shape of the solution feels right: a sink that rewards checking in, helps the heroes you neglected and leaves the walls standing.</p>
+<aside class="takeaway pxbox"><p><strong>Takeaway:</strong> when gold piles up, look for a sink that scales with the player's wealth, has diminishing returns within a day and is capped by progress. That way it gives money a job without letting money skip the game.</p></aside>
+      </article>
+      <nav class="post-foot" aria-label="Read next">
+        <p class="post-game"><strong>The game:</strong> <a href="/games/paw-and-sword/">Paw &amp; Sword game page ▸</a></p>
+        <h2>Read next</h2>
+        <ul class="post-list"><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 October 2026</time> · 5 min read</p><h3><a href="/blog/balancing-an-idle-tycoon-with-bot-players/">Balancing an idle tycoon with bot players</a></h3><p>Four bot profiles, a simulated month of play in a few minutes, and the problems they found before any human tester did.</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 October 2026</time> · 5 min read</p><h3><a href="/blog/boss-walls-boss-horn-losing-fairly/">Boss walls, the Boss Horn and losing fairly</a></h3><p>Some bosses are meant to stop you for a while. The trick is making a loss feel like information, not punishment.</p></article></li></ul>
+        <a class="btn alt" href="/blog/">◂ Back to all posts</a>
+      </nav>
+    </div>
+  </section>
+  <section class="contact below" id="contact" aria-labelledby="contact-h">
+    <div class="wrap contact-grid">
+      <div class="sign reveal">
+        <img src="/img/mascot.webp" width="720" height="528" loading="lazy" decoding="async" alt="Can Fabrika mascot: a purple cat engineer with goggles and a wrench, leaning on a wooden sign">
+        <div class="sign-text" aria-hidden="true">Say hi!</div>
+      </div>
+      <div class="reveal">
+        <h2 id="contact-h">The door is open</h2>
+        <p class="lead">Players, press, publishers and collabs: all welcome.</p>
+        <div class="contact-links">
+          <a class="btn alt" href="mailto:admin@canfabrika.com">✉ admin@canfabrika.com</a>
+          <a class="btn alt" href="https://www.linkedin.com/in/canberkd" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn red" href="https://www.youtube.com/results?search_query=Kendi+Kendime+Hikayeler" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main><footer>
+  <div class="wrap foot">
+    <span style="display:flex;align-items:center;gap:10px"><img class="px" src="/img/mark.webp" width="34" height="30" alt="">© <span id="yr">2026</span> Can Fabrika · İstanbul</span>
+    <nav aria-label="Footer"><a href="/games/paw-and-sword/">Paw &amp; Sword</a> <a href="/games/rezil/">REZİL</a> <a href="/games/whisker-hollow/">Whisker Hollow</a> <a href="/blog/">Blog</a> <a href="mailto:admin@canfabrika.com">admin@canfabrika.com</a> <a href="/press/">Press kit</a> <a href="https://www.youtube.com/results?search_query=Kendi+Kendime+Hikayeler" rel="noopener">YouTube</a> <a href="/support/">Support</a> <a href="/impressum/">Imprint</a> <a href="/privacy/">Privacy</a></nav>
+    <span>Made with love and pixels.</span>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body></html>

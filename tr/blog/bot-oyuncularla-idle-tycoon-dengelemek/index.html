@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="tr" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bot oyuncularla bir idle tycoon dengelemek | Can Fabrika</title>
+<meta name="description" content="Paw &amp; Sword otomatik bot oyuncularla nasıl dengeleniyor: dört oyuncu profili, simüle edilmiş bir aylık oyun, sayıların gösterdikleri ve botların söyleyemeyecekleri.">
+<link rel="canonical" href="https://www.canfabrika.com/tr/blog/bot-oyuncularla-idle-tycoon-dengelemek/"><link rel="alternate" hreflang="en" href="https://www.canfabrika.com/blog/balancing-an-idle-tycoon-with-bot-players/"><link rel="alternate" hreflang="tr" href="https://www.canfabrika.com/tr/blog/bot-oyuncularla-idle-tycoon-dengelemek/"><link rel="alternate" hreflang="x-default" href="https://www.canfabrika.com/blog/balancing-an-idle-tycoon-with-bot-players/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#2A1838">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Can Fabrika"><meta name="application-name" content="Can Fabrika">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Can Fabrika">
+<meta property="og:title" content="Bot oyuncularla bir idle tycoon dengelemek | Can Fabrika"><meta property="og:description" content="Paw &amp; Sword otomatik bot oyuncularla nasıl dengeleniyor: dört oyuncu profili, simüle edilmiş bir aylık oyun, sayıların gösterdikleri ve botların söyleyemeyecekleri.">
+<meta property="og:url" content="https://www.canfabrika.com/tr/blog/bot-oyuncularla-idle-tycoon-dengelemek/"><meta property="og:image" content="https://www.canfabrika.com/img/og/paw-and-sword.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="tr_TR"><meta property="og:locale:alternate" content="en_US"><meta property="article:published_time" content="2026-10-21"><meta property="article:author" content="Can">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="48x48" href="/img/icons/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/pixelify.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.canfabrika.com/#studio", "name": "Can Fabrika", "legalName": "Yusuf Demir (Can Fabrika)", "url": "https://www.canfabrika.com/", "logo": "https://www.canfabrika.com/img/logo.png", "image": "https://www.canfabrika.com/og-image.png", "email": "admin@canfabrika.com", "description": "Indie game studio in Istanbul making pixel-art tycoon games and party games for iPhone and Android.", "address": {"@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR"}, "founder": {"@type": "Person", "@id": "https://www.canfabrika.com/#can", "name": "Can", "jobTitle": "Indie game developer and YouTuber", "sameAs": ["https://www.linkedin.com/in/canberkd"]}, "knowsAbout": ["Mobile games", "Pixel art", "Idle tycoon games", "Party games", "Unity"], "sameAs": ["https://www.linkedin.com/in/canberkd"]}, {"@type": "Article", "@id": "https://www.canfabrika.com/tr/blog/bot-oyuncularla-idle-tycoon-dengelemek/#article", "headline": "Bot oyuncularla bir idle tycoon dengelemek", "description": "Paw & Sword otomatik bot oyuncularla nasıl dengeleniyor: dört oyuncu profili, simüle edilmiş bir aylık oyun, sayıların gösterdikleri ve botların söyleyemeyecekleri.", "inLanguage": "tr", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "wordCount": 744, "image": "https://www.canfabrika.com/img/mascot.webp", "mainEntityOfPage": "https://www.canfabrika.com/tr/blog/bot-oyuncularla-idle-tycoon-dengelemek/", "url": "https://www.canfabrika.com/tr/blog/bot-oyuncularla-idle-tycoon-dengelemek/", "author": {"@type": "Person", "@id": "https://www.canfabrika.com/#can", "name": "Can", "url": "https://www.canfabrika.com/"}, "publisher": {"@id": "https://www.canfabrika.com/#studio"}, "isPartOf": {"@type": "Blog", "@id": "https://www.canfabrika.com/tr/blog/#blog", "name": "Can Fabrika Devlog"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Can Fabrika", "item": "https://www.canfabrika.com/tr/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.canfabrika.com/tr/blog/"}, {"@type": "ListItem", "position": 3, "name": "Bot oyuncularla bir idle tycoon dengelemek", "item": "https://www.canfabrika.com/tr/blog/bot-oyuncularla-idle-tycoon-dengelemek/"}]}]}</script><meta name="google-site-verification" content="omlJJhKDroRbwBHp-f-Joc5zq-EFIKVsDdQLzzSmENg"><meta name="google-adsense-account" content="ca-pub-7863089077580116">
+</head><body>
+<a class="skip" href="#main">İçeriğe geç</a>
+<div class="lang-hint" id="lang-hint" hidden data-alts='{&quot;en&quot;: [&quot;/blog/balancing-an-idle-tycoon-with-bot-players/&quot;, &quot;This page is also available in English.&quot;, &quot;Close&quot;, &quot;English&quot;]}'></div>
+<header class="site-head">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="/tr/"><img class="px" src="/img/mark.webp" width="44" height="39" alt="">Can Fabrika</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-links">Menü</button>
+    <div class="links" id="site-links"><a href="/tr/#games">Oyunlar</a><a href="/tr/blog/" aria-current="page">Blog</a><a href="/tr/#youtube">YouTube</a><a href="/tr/#about">Hakkında</a><a href="/tr/#contact">İletişim</a>
+      <details class="lang-pick">
+        <summary aria-label="Language">🌐 TR</summary>
+        <ul><li><a href="/blog/balancing-an-idle-tycoon-with-bot-players/" hreflang="en" lang="en">English</a></li><li><a href="/tr/blog/bot-oyuncularla-idle-tycoon-dengelemek/" hreflang="tr" lang="tr" aria-current="true">Türkçe</a></li></ul>
+      </details>
+    </div>
+  </nav>
+</header><main id="main">
+  <section class="g-hero post-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/tr/">Can Fabrika</a></li><li><a href="/tr/blog/">Blog</a></li><li aria-current="page">Bot oyuncularla bir idle tycoon dengelemek</li></ol></nav>
+      <span class="eyebrow">Devlog · Paw &amp; Sword · Denge</span>
+      <h1>Bot oyuncularla bir idle tycoon dengelemek</h1>
+      <p class="lead">Dört bot profili, birkaç dakikada simüle edilen bir aylık oyun ve hiçbir insan testçi görmeden bulunan sorunlar.</p>
+      <p class="post-meta">Yazan <span class="byline">Can · Can Fabrika</span> · <time datetime="2026-10-21">21 Ekim 2026</time> · 5 dk okuma</p>
+    </div>
+  </section>
+  <section class="post-sec">
+    <div class="wrap">
+      <article class="post">
+<p>İdle oyunlar dakikalar üzerinden değil, haftalar üzerinden dengelenir. Paw &amp; Sword'daki bir sorun ancak on ikinci günde, oyuncu beş bina kurup dört bölge açtıktan ve oyuna eskisi kadar sık girmemeye başladıktan sonra ortaya çıkabilir. Tek kişilik bir stüdyo olarak her sayı değiştirdiğimde testçilerden bir ay oynamalarını isteyemem. Ben de bunu benim yerime yapan botlar kurdum.</p>
+<p>Bu yazıda bot oyuncuların nasıl çalıştığını, neyi ölçtüklerini, ne bulduklarını ve nerede kör kaldıklarını anlatıyorum.</p>
+<h2>Neden oyuncu simüle etmeli?</h2>
+<p>Bir idle tycoon'un ekonomisi iç içe geçmiş döngülerden oluşan bir ağ. Kahramanlar avlanıyor, altın kazanıyor, onu senin dükkânlarında harcıyor, yemeğe ve uykuya ihtiyaç duyuyor, seviye ve Şöhret kazanıyor, yeni bölgeler açıyor, daha güçlü canavarlarla karşılaşıyor. Tek bir kılıcın fiyatını değiştir, etkisi hepsine yayılır; çoğu zaman da oyun içinde günler sonra.</p>
+<p>Tablolar tek tek eğrilerde işe yarıyor; mesela bir seviye için ne kadar deneyim gerektiği gibi. Ama etkileşimlerde kötüler: Depo dolu, kahramanlar yorgun ve boss borusu aynı anda hazırsa ne olur? Bunu görmek için oyunu gerçekten çalıştırman gerekiyor.</p>
+<p>Paw &amp; Sword'un oyun mantığı, grafiklerden ayrı, deterministik bir simülasyon olarak çalışıyor. Aynı başlangıç tohumu verildiğinde her seferinde aynı sonucu üretiyor. Bu sayede oyunun tamamını hiçbir şey çizmeden çok yüksek hızda koşturmak mümkün. Dört profil için simüle edilen bir ay birkaç dakika sürüyor.</p>
+<h2>Dört tür oyuncu</h2>
+<p>Tek bir "ortalama oyuncu" botu en önemli sorunları saklardı, çünkü gerçek oyuncular birbirinden çok farklı. Bu yüzden dört profil var:</p>
+<ul>
+<li><strong>Boşta bekleyen ücretsiz oyuncu.</strong> Günde birkaç kez kısaca giriyor, çevrimdışı kazancını topluyor, bir avuç karar verip çıkıyor. Hiç ödeme yapmıyor, reklam izlemiyor.</li>
+<li><strong>Aktif ücretsiz oyuncu.</strong> Daha uzun oturumlar oynuyor; inşa ediyor, üretim yapıyor, kahramanları gönderiyor ve boss borusu hazır olur olmaz öttürüyor. Ödeme yapmıyor.</li>
+<li><strong>Reklam izleyen oyuncu.</strong> Aktif oyuncu gibi oynuyor ama oyunun izin verdiği her isteğe bağlı ödüllü reklamı da izliyor.</li>
+<li><strong>Az harcayan oyuncu.</strong> Aktif oynuyor ve birkaç küçük satın alma yapıyor.</li>
+</ul>
+<p>Ücretsiz profiller bana oyunun parasız da adil olup olmadığını söylüyor. Reklam izleyen ve az harcayan profiller ise isteğe bağlı ekstraların makul bir avantaj sağlayıp sağlamadığını ve emek istemesi gereken kısımları, mesela boss duvarlarını, atlatıp atlatmadığını gösteriyor.</p>
+<figure><img src="/img/mascot.webp" width="720" height="528" alt="Can Fabrika maskotu: gözlüklü ve İngiliz anahtarlı mor kedi mühendis, tahta bir tabelanın yanında gülümsüyor" loading="lazy" decoding="async"><figcaption>Fabrikanın mühendisi; botları kesin o çalıştırırdı.</figcaption></figure>
+<h2>Botlar neyi ölçüyor?</h2>
+<p>Her koşu, profil başına bir rapor ve yan yana bir özet yazıyor. En faydalı sayılar toplamlar değil, aralıklar:</p>
+<ul>
+<li><strong>Kilometre taşları:</strong> Her bölgenin ne zaman açıldığı, her boss'un ilk kez ne zaman öldüğü, Şöhret ve Belediye Binası seviyelerinin ne zaman geldiği.</li>
+<li><strong>Duvarlar:</strong> İki kilometre taşı arasındaki en uzun süre; hem gerçek gün hem de gerçekten oynanan saat olarak. Boşta bekleyen oyuncu için uzun bir duvar beklenen bir şey. Aktif oyuncu için uzun bir duvar ise bir uyarı.</li>
+<li><strong>Tıkanmalar:</strong> Botun yapacak faydalı bir şeyinin olmadığı dönemler.</li>
+<li><strong>Altın:</strong> Her gün kesede ne kadar olduğu ve ne kadarının harcandığı. Sürekli büyüyen bir kese, alınmaya değer bir şey olmadığı anlamına geliyor.</li>
+<li><strong>Kahramanların durumu:</strong> Kaç kahramanın aç, bitkin ya da morali sıfırda olduğu; avda ve kasabada ne kadar zaman geçirdikleri.</li>
+<li><strong>İsraf:</strong> Deponun dolu kaldığı süre ve çevrimdışı tavan yüzünden kaybedilen kazanç.</li>
+</ul>
+<h2>Ne buldular?</h2>
+<p>Botlar ekmeklerini fazlasıyla hak ettiler. İki bulgu tasarımı değiştirdi.</p>
+<p><strong>Oyunun ortasında altın yığılması.</strong> Boşta bekleyen oyuncunun kesesi, oyunun orta bölümü boyunca gün be gün büyümeye devam etti. Altın birikiyordu, çünkü o aşamada alınmaya değer hiçbir şey yoktu. Bu sadece bir denge sorunu değil, bir motivasyon sorunu: Altının bir işe yaramıyorsa onu toplamak keyif vermeyi bırakıyor. Çözüm yeni bir altın harcama yolu oldu: Kahraman Eğitimi. <a href="/tr/blog/oyun-ortasi-altin-sorunu-kahraman-egitimi/">Hikâyenin tamamı ayrı bir yazıda</a>.</p>
+<p><strong>Takılıp kalan kahramanlar.</strong> Aktif profiller, bir döngüye sıkışan kahramanlar gösterdi: Morali sıfırdaki bir kahraman neşelenmek için eve yürüyor, boss borusu onu hemen geri çağırıyor ve meyhaneye hiç varamıyordu. Bu arada kasabanın geliri sıfıra düşüyordu. Bu da kaybedilen bir boss savaşından sonra dinlenme ve yorgun kahramanların evde kalması gibi kurallara yol açtı; onları <a href="/tr/blog/boss-duvarlari-boss-borusu-adil-kaybetmek/">boss duvarları ve adil kaybetmek</a> yazısında anlatıyorum. Aynı analiz, Yeniden Doğuş Tapınağı'nın artık daha erken açılmasının da sebeplerinden biri oldu; böylece tavana dayanan güçlü kahramanların gidecek bir yeri var.</p>
+<h2>Botların söyleyemeyecekleri</h2>
+<p>Botlar asla sıkılmaz. Bir düğmeyi yanlış okumaz, bir menüyü neden açtığını unutmaz, bir boss karşısında kendini kandırılmış hissetmez. Tam olarak onlar için yazdığım stratejiyi oynarlar. Yani sayıların nerede bozulduğunu bulmakta mükemmeller, bir şeyin eğlenceli olup olmadığını söylemekte ise işe yaramazlar.</p>
+<p>Bu yüzden botlar tek bir soruyu cevaplıyor: "Ekonomi farklı oyuncu türleri için ayakta kalıyor mu?" Bir boss savaşının heyecanlı olup olmadığı, bir öğretici adımın kafa karıştırıp karıştırmadığı, bir kahramanın sevimli olup olmadığı: bunlar için hâlâ insanlara ihtiyaç var.</p>
+<aside class="takeaway pxbox"><p><strong>Özetle:</strong> Oyununun mantığı grafiksiz çalışabiliyorsa tek bir ortalama oyuncu değil, birbirinden belirgin şekilde farklı birkaç profil simüle et. Sadece toplamlara değil, kilometre taşları arasındaki aralıklara ve harcanmayan altına bak. Eğlenceye ise insanlar karar versin.</p></aside>
+      </article>
+      <nav class="post-foot" aria-label="Sıradaki yazılar">
+        <p class="post-game"><strong>Oyun:</strong> <a href="/tr/oyunlar/paw-and-sword/">Paw &amp; Sword oyun sayfası ▸</a></p>
+        <h2>Sıradaki yazılar</h2>
+        <ul class="post-list"><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 4 dk okuma</p><h3><a href="/tr/blog/oyun-ortasi-altin-sorunu-kahraman-egitimi/">Oyun ortasındaki altın sorunu ve Kahraman Eğitimi</a></h3><p>Alınacak bir şey olmadığı için altın yığılıyordu. Günlük fiyatı artan bir eğitim özelliği, boss duvarlarını bozmadan altına nasıl bir iş verdi?</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 Ekim 2026</time> · 4 dk okuma</p><h3><a href="/tr/blog/boss-duvarlari-boss-borusu-adil-kaybetmek/">Boss duvarları, Boss Borusu ve adil kaybetmek</a></h3><p>Bazı boss'lar seni bir süre durdurmak için var. İşin sırrı, yenilgiyi ceza gibi değil bilgi gibi hissettirmek.</p></article></li></ul>
+        <a class="btn alt" href="/tr/blog/">◂ Tüm yazılara dön</a>
+      </nav>
+    </div>
+  </section>
+  <section class="contact below" id="contact" aria-labelledby="contact-h">
+    <div class="wrap contact-grid">
+      <div class="sign reveal">
+        <img src="/img/mascot.webp" width="720" height="528" loading="lazy" decoding="async" alt="Can Fabrika maskotu: gözlüklü ve İngiliz anahtarlı mor kedi mühendis, tahta bir tabelaya yaslanıyor">
+        <div class="sign-text" aria-hidden="true">Selam ver!</div>
+      </div>
+      <div class="reveal">
+        <h2 id="contact-h">Kapı açık</h2>
+        <p class="lead">Oyuncular, basın, yayıncılar ve iş birlikleri: hepsine açığız.</p>
+        <div class="contact-links">
+          <a class="btn alt" href="mailto:admin@canfabrika.com">✉ admin@canfabrika.com</a>
+          <a class="btn alt" href="https://www.linkedin.com/in/canberkd" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn red" href="https://www.youtube.com/results?search_query=Kendi+Kendime+Hikayeler" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main><footer>
+  <div class="wrap foot">
+    <span style="display:flex;align-items:center;gap:10px"><img class="px" src="/img/mark.webp" width="34" height="30" alt="">© <span id="yr">2026</span> Can Fabrika · İstanbul</span>
+    <nav aria-label="Footer"><a href="/tr/oyunlar/paw-and-sword/">Paw &amp; Sword</a> <a href="/tr/oyunlar/rezil/">REZİL</a> <a href="/tr/oyunlar/whisker-hollow/">Whisker Hollow</a> <a href="/tr/blog/">Blog</a> <a href="mailto:admin@canfabrika.com">admin@canfabrika.com</a> <a href="/press/">Basın kiti</a> <a href="https://www.youtube.com/results?search_query=Kendi+Kendime+Hikayeler" rel="noopener">YouTube</a> <a href="/support/">Destek</a> <a href="/impressum/">Künye</a> <a href="/privacy/#tr">Gizlilik</a></nav>
+    <span>Sevgiyle ve piksellerle yapıldı.</span>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body></html>

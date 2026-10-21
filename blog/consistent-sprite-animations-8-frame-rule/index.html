@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Keeping sprite animations consistent: the 8-frame sheet rule | Can Fabrika</title>
+<meta name="description" content="A practical sprite pipeline from Paw &amp; Sword: pose references, sheets of exactly 8 frames, scripted cutting and scaling, one feet line, and checks for size pops and eye colour.">
+<link rel="canonical" href="https://www.canfabrika.com/blog/consistent-sprite-animations-8-frame-rule/"><link rel="alternate" hreflang="en" href="https://www.canfabrika.com/blog/consistent-sprite-animations-8-frame-rule/"><link rel="alternate" hreflang="tr" href="https://www.canfabrika.com/tr/blog/tutarli-sprite-animasyonlari-8-kare-kurali/"><link rel="alternate" hreflang="x-default" href="https://www.canfabrika.com/blog/consistent-sprite-animations-8-frame-rule/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#2A1838">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Can Fabrika"><meta name="application-name" content="Can Fabrika">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Can Fabrika">
+<meta property="og:title" content="Keeping sprite animations consistent: the 8-frame sheet rule | Can Fabrika"><meta property="og:description" content="A practical sprite pipeline from Paw &amp; Sword: pose references, sheets of exactly 8 frames, scripted cutting and scaling, one feet line, and checks for size pops and eye colour.">
+<meta property="og:url" content="https://www.canfabrika.com/blog/consistent-sprite-animations-8-frame-rule/"><meta property="og:image" content="https://www.canfabrika.com/img/og/paw-and-sword.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="tr_TR"><meta property="article:published_time" content="2026-10-21"><meta property="article:author" content="Can">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="48x48" href="/img/icons/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/pixelify.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script type="speculationrules">{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.canfabrika.com/#studio", "name": "Can Fabrika", "legalName": "Yusuf Demir (Can Fabrika)", "url": "https://www.canfabrika.com/", "logo": "https://www.canfabrika.com/img/logo.png", "image": "https://www.canfabrika.com/og-image.png", "email": "admin@canfabrika.com", "description": "Indie game studio in Istanbul making pixel-art tycoon games and party games for iPhone and Android.", "address": {"@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR"}, "founder": {"@type": "Person", "@id": "https://www.canfabrika.com/#can", "name": "Can", "jobTitle": "Indie game developer and YouTuber", "sameAs": ["https://www.linkedin.com/in/canberkd"]}, "knowsAbout": ["Mobile games", "Pixel art", "Idle tycoon games", "Party games", "Unity"], "sameAs": ["https://www.linkedin.com/in/canberkd"]}, {"@type": "Article", "@id": "https://www.canfabrika.com/blog/consistent-sprite-animations-8-frame-rule/#article", "headline": "Keeping sprite animations consistent: the 8-frame sheet rule", "description": "A practical sprite pipeline from Paw & Sword: pose references, sheets of exactly 8 frames, scripted cutting and scaling, one feet line, and checks for size pops and eye colour.", "inLanguage": "en", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "wordCount": 946, "image": "https://www.canfabrika.com/img/r/hht-portrait-800.webp", "mainEntityOfPage": "https://www.canfabrika.com/blog/consistent-sprite-animations-8-frame-rule/", "url": "https://www.canfabrika.com/blog/consistent-sprite-animations-8-frame-rule/", "author": {"@type": "Person", "@id": "https://www.canfabrika.com/#can", "name": "Can", "url": "https://www.canfabrika.com/"}, "publisher": {"@id": "https://www.canfabrika.com/#studio"}, "isPartOf": {"@type": "Blog", "@id": "https://www.canfabrika.com/blog/#blog", "name": "Can Fabrika Devlog"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Can Fabrika", "item": "https://www.canfabrika.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.canfabrika.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Keeping sprite animations consistent: the 8-frame sheet rule", "item": "https://www.canfabrika.com/blog/consistent-sprite-animations-8-frame-rule/"}]}]}</script><meta name="google-site-verification" content="omlJJhKDroRbwBHp-f-Joc5zq-EFIKVsDdQLzzSmENg"><meta name="google-adsense-account" content="ca-pub-7863089077580116">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="lang-hint" id="lang-hint" hidden data-alts='{&quot;tr&quot;: [&quot;/tr/blog/tutarli-sprite-animasyonlari-8-kare-kurali/&quot;, &quot;Bu sayfa Türkçe de mevcut.&quot;, &quot;Kapat&quot;, &quot;Türkçe&quot;]}'></div>
+<header class="site-head">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="/"><img class="px" src="/img/mark.webp" width="44" height="39" alt="">Can Fabrika</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-links">Menu</button>
+    <div class="links" id="site-links"><a href="/#games">Games</a><a href="/blog/" aria-current="page">Blog</a><a href="/#youtube">YouTube</a><a href="/#about">About</a><a href="/#contact">Contact</a>
+      <details class="lang-pick">
+        <summary aria-label="Language">🌐 EN</summary>
+        <ul><li><a href="/blog/consistent-sprite-animations-8-frame-rule/" hreflang="en" lang="en" aria-current="true">English</a></li><li><a href="/tr/blog/tutarli-sprite-animasyonlari-8-kare-kurali/" hreflang="tr" lang="tr">Türkçe</a></li></ul>
+      </details>
+    </div>
+  </nav>
+</header><main id="main">
+  <section class="g-hero post-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Can Fabrika</a></li><li><a href="/blog/">Blog</a></li><li aria-current="page">Keeping sprite animations consistent: the 8-frame sheet rule</li></ol></nav>
+      <span class="eyebrow">Devlog · Paw &amp; Sword · Art pipeline</span>
+      <h1>Keeping sprite animations consistent: the 8-frame sheet rule</h1>
+      <p class="lead">Sheets of exactly eight frames, feet on one line, no size pops and an eye-colour check: the boring rules that keep hundreds of animations clean.</p>
+      <p class="post-meta">By <span class="byline">Can · Can Fabrika</span> · <time datetime="2026-10-21">21 October 2026</time> · 5 min read</p>
+    </div>
+  </section>
+  <section class="post-sec">
+    <div class="wrap">
+      <article class="post">
+<p>Paw &amp; Sword has 45 hero classes, seven rank looks per class, several clips per look (idle, walk, attack, skill, getting hurt) and up to five drawn views per clip. That adds up to a very large number of animation strips. The danger is not one bad strip. It is a thousand strips that are each slightly off in a different way.</p>
+<p>When you watch a hero walk, your eye catches tiny mistakes: the cat growing for one frame, the feet sinking below the ground, the eyes changing colour, a cape that vanishes for a frame and comes back. None of these show up in a single still image. All of them show up in motion. This post lists the rules I use to keep the strips consistent. They are boring on purpose.</p>
+<h2>Start from a pose reference</h2>
+<p>Every class has a base look, the Normal rank, with a complete set of strips. Those frames are the pose reference for every higher look. Before a new strip is made, the matching base frames are laid out as a pose board, in order, at the right size.</p>
+<p>The higher look then follows those poses exactly: same number of frames, same order, same timing. Only the outfit and gear change. This has two benefits. Motion stays identical across ranks, so a hero who ranks up still moves like themselves. And the game code that plays the animation does not care which look is active, because every look has the same frame layout.</p>
+<p>The cat itself is fixed by the class's identity sentence, which I described in <a href="/blog/one-cat-per-class-45-hero-classes/">one cat per class</a>.</p>
+<h2>The 8-frame sheet rule</h2>
+<p>New frames are produced on sheets, and every sheet follows the same layout:</p>
+<ul>
+<li>Exactly eight figures: eight frames of one strip of one look.</li>
+<li>A 4 by 2 grid, read like text: top row is frames 1 to 4, bottom row frames 5 to 8.</li>
+<li>Every figure fully inside its own cell, with empty space around it.</li>
+<li>All eight at the same scale, with the feet of each row on one line.</li>
+<li>No text, numbers, grid lines or ground shadows. A transparent background, or a flat colour that never appears in the art.</li>
+</ul>
+<p>Strips that are not eight frames long still use eight-frame sheets. A ten-frame strip uses two sheets, frames 1 to 8 and frames 3 to 10. A four-frame strip repeats its frames to fill the sheet. The overlap is useful: the duplicate frames are spare takes, and a bad frame can be swapped for its spare without redoing the strip.</p>
+<p>Why such a strict layout? Because a predictable sheet can be cut by a script. Nobody crops frames by hand, and a script makes the same decision every time.</p>
+<h2>Cutting and scaling by script</h2>
+<p>The cutting script looks for one figure in each cell. If two figures touch, or a cell is empty, it refuses and says why. Failing loudly is a feature: a sheet that is cut "mostly right" is worse than one that is rejected.</p>
+<p>Scaling is where most size problems come from. The tempting approach is to fit each frame to its own bounding box. That breaks immediately: an attack frame with a raised sword has a taller box than an idle frame, so fitting it would shrink the cat. When the strip plays, the hero seems to pulse. I call that a <strong>size pop</strong>.</p>
+<p>The fix is to scale the whole strip by one factor, so the cat's body is the same size in every frame, and to align frames on a common anchor: the feet. The lowest solid row of the figure sits on the same row of every frame. Weapons and effects are allowed to stick out above or to the sides. Jumps are a deliberate exception and are checked by eye.</p>
+<p>Finally, edges are made hard. Pixel art with soft, semi-transparent edges looks blurry when the game scales it, so every pixel is either fully visible or fully transparent.</p>
+<h2>Checking: contact sheets and a short list</h2>
+<p>Every finished strip gets a contact sheet, a single image with all frames in a row next to the reference, and it is also played in a loop at normal and 2x speed. The checklist is short:</p>
+<ol>
+<li><strong>Size:</strong> does the cat stay the same size in every frame?</li>
+<li><strong>Feet:</strong> do the feet stay on the line, without bobbing or sliding?</li>
+<li><strong>Eyes:</strong> is the eye colour right in every frame? It is the detail that slips most often.</li>
+<li><strong>Outfit:</strong> are all parts present in every frame: cape, shoulder piece, belt, hat?</li>
+<li><strong>Weapon:</strong> does it stay in the same paw for the whole strip?</li>
+<li><strong>Edges:</strong> any leftover background pixels around the outline?</li>
+</ol>
+<p>If one frame fails, only that frame is replaced, ideally with a spare take from the sheet. Redoing whole strips for one bad frame is how pipelines get slow.</p>
+<h2>Why the boring rules are worth it</h2>
+<p>Consistency is what makes small sprites feel alive. A walk cycle where every frame matches reads as one character moving. A walk cycle with one wrong frame reads as a glitch, even if nobody can say which frame it was.</p>
+<p>The rules also make the pipeline repeatable. Problems are caught by a script or a checklist instead of by a player. And once the format is fixed, the same steps work for directional views too, which mattered a lot when heroes learned to <a href="/blog/pixel-cats-walking-in-8-directions/">walk in eight directions</a>.</p>
+<figure class="tall"><picture><source type="image/avif" srcset="/img/r/hht-portrait-480.avif 480w, /img/r/hht-portrait-800.avif 800w" sizes="(max-width:760px) 92vw, 680px"><source type="image/webp" srcset="/img/r/hht-portrait-480.webp 480w, /img/r/hht-portrait-800.webp 800w" sizes="(max-width:760px) 92vw, 680px"><img src="/img/r/hht-portrait-800.webp" width="800" height="1200" alt="Paw &amp; Sword town scene with many cat heroes and shopkeepers in a busy pixel-art market square" loading="lazy" decoding="async"></picture><figcaption>With dozens of animated cats on screen, small inconsistencies add up fast.</figcaption></figure>
+<aside class="takeaway pxbox"><p><strong>Takeaway:</strong> fix the sheet layout, scale whole strips by one factor, anchor every frame on the feet and check eye colour in motion. Most animation bugs players notice are consistency bugs, not drawing bugs.</p></aside>
+      </article>
+      <nav class="post-foot" aria-label="Read next">
+        <p class="post-game"><strong>The game:</strong> <a href="/games/paw-and-sword/">Paw &amp; Sword game page ▸</a></p>
+        <h2>Read next</h2>
+        <ul class="post-list"><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 October 2026</time> · 5 min read</p><h3><a href="/blog/pixel-cats-walking-in-8-directions/">Teaching pixel cats to walk in 8 directions</a></h3><p>Why side-view heroes felt wrong, how five drawn views and some mirroring give eight directions, and the traps in flipping sprites.</p></article></li><li class="pxbox"><article><p class="post-meta"><time datetime="2026-10-21">21 October 2026</time> · 5 min read</p><h3><a href="/blog/one-cat-per-class-45-hero-classes/">One cat per class: designing 45 hero classes that stay recognisable</a></h3><p>45 classes, 7 rank looks each, and one rule that keeps every hero recognisable from Normal to Mythic.</p></article></li></ul>
+        <a class="btn alt" href="/blog/">◂ Back to all posts</a>
+      </nav>
+    </div>
+  </section>
+  <section class="contact below" id="contact" aria-labelledby="contact-h">
+    <div class="wrap contact-grid">
+      <div class="sign reveal">
+        <img src="/img/mascot.webp" width="720" height="528" loading="lazy" decoding="async" alt="Can Fabrika mascot: a purple cat engineer with goggles and a wrench, leaning on a wooden sign">
+        <div class="sign-text" aria-hidden="true">Say hi!</div>
+      </div>
+      <div class="reveal">
+        <h2 id="contact-h">The door is open</h2>
+        <p class="lead">Players, press, publishers and collabs: all welcome.</p>
+        <div class="contact-links">
+          <a class="btn alt" href="mailto:admin@canfabrika.com">✉ admin@canfabrika.com</a>
+          <a class="btn alt" href="https://www.linkedin.com/in/canberkd" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn red" href="https://www.youtube.com/results?search_query=Kendi+Kendime+Hikayeler" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main><footer>
+  <div class="wrap foot">
+    <span style="display:flex;align-items:center;gap:10px"><img class="px" src="/img/mark.webp" width="34" height="30" alt="">© <span id="yr">2026</span> Can Fabrika · İstanbul</span>
+    <nav aria-label="Footer"><a href="/games/paw-and-sword/">Paw &amp; Sword</a> <a href="/games/rezil/">REZİL</a> <a href="/games/whisker-hollow/">Whisker Hollow</a> <a href="/blog/">Blog</a> <a href="mailto:admin@canfabrika.com">admin@canfabrika.com</a> <a href="/press/">Press kit</a> <a href="https://www.youtube.com/results?search_query=Kendi+Kendime+Hikayeler" rel="noopener">YouTube</a> <a href="/support/">Support</a> <a href="/impressum/">Imprint</a> <a href="/privacy/">Privacy</a></nav>
+    <span>Made with love and pixels.</span>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body></html>
