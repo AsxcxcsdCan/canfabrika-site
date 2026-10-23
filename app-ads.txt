@@ -7,12 +7,12 @@ OWNERDOMAIN=canfabrika.com
 google.com, pub-7863089077580116, DIRECT, f08c47fec0942fa0
 
 # ---------------------------------------------------------------------------------------------------------------
-# Unity LevelPlay (ironSource) + Unity Ads: TO BE CONFIRMED BY THE OWNER, then uncomment.
+# Unity LevelPlay (ironSource) + Unity Ads. Line 1 is live; lines 2-3 follow once Unity Ads is connected in LevelPlay.
 # These IDs belong to your own accounts and cannot be guessed. Do not uncomment a line with a [placeholder] in it.
 #
-# 1) ironSource / LevelPlay direct line. ID: LevelPlay platform > avatar (bottom left) > Account > API tab >
-#    "Publisher ID".
-# ironsrc.com, [IRONSOURCE_PUBLISHER_ID], DIRECT
+# 1) ironSource / LevelPlay direct line: Can Fabrika LevelPlay account (admin@canfabrika.com), Publisher ID from
+#    LevelPlay platform > avatar (bottom left) > Account > API tab. Confirmed 2026-10-23.
+ironsrc.com, 694747, DIRECT
 #
 # 2) Unity Ads direct line (Unity Ads is a LevelPlay bidder). ID: Unity Cloud dashboard > Monetization > Settings >
 #    Organization > App-ads.txt > "Show full list" (copy the unity.com line exactly as shown).
